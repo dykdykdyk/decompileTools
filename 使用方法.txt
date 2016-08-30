@@ -1,0 +1,5 @@
+1.讲.apk文件修改后缀名.zip，解压，会得到classes.dex文件。
+
+2.打开 dex2jar-2.0文件 在命令行，讲d2j-dex2jar.bat   classes.dex 一次输出，回车
+
+3.会自动生成classes-dex2jar.jar文件，打开Android目录，讲这个文件classes-dex2jar.jar拖入进jd-gui.exe。
