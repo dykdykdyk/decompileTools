@@ -1,0 +1,17 @@
+package android.support.v4.e;
+
+import java.util.Locale;
+
+final class e
+  implements b
+{
+  public final String a(Locale paramLocale)
+  {
+    return f.a(paramLocale);
+  }
+}
+
+/* Location:           C:\crazyd\work\ustone\odm2016031702\baidu\android\nut-dex2jar.jar
+ * Qualified Name:     android.support.v4.e.e
+ * JD-Core Version:    0.6.2
+ */

@@ -1,0 +1,13 @@
+package com.amap.api.maps2d;
+
+public abstract interface LocationSource
+{
+  public abstract void activate(LocationSource.OnLocationChangedListener paramOnLocationChangedListener);
+
+  public abstract void deactivate();
+}
+
+/* Location:           C:\crazyd\work\ustone\odm2016031702\baidu\android\nut-dex2jar.jar
+ * Qualified Name:     com.amap.api.maps2d.LocationSource
+ * JD-Core Version:    0.6.2
+ */
