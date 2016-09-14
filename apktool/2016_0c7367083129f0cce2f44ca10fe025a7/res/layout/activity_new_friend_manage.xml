@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/c5" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/actionbar_default_with_border" />
+    <RelativeLayout android:id="@id/rl_new_friend_empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/iv_friend_list_new_friend_empty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="130.0dip" android:src="@drawable/new_friend_empty" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/t3" android:textColor="@color/c16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:text="@string/friend_list_new_friend_empty" android:layout_below="@id/iv_friend_list_new_friend_empty" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView android:scrollbarSize="0.0dip" android:id="@id/rv_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:dividerHeight="0.0dip" />
+</LinearLayout>

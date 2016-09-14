@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.nut.blehunter" platformBuildVersionCode="23" platformBuildVersionName="6.0-2438415">
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.nut.blehunter.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.nut.blehunter.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name="com.nut.blehunter.NutTrackerApplication" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_key"/>
+        <meta-data android:name="io.fabric.ApiKey" android:value="16718f61dd3f79c58db8fb1eabc9ca75d12efdbc"/>
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="@string/key_amap"/>
+        <meta-data android:name="UMENG_APPKEY" android:value="@string/key_umeng"/>
+        <meta-data android:name="UMENG_MESSAGE_SECRET" android:value="@string/key_umeng_push"/>
+        <meta-data android:name="UMENG_CHANNEL" android:value="nutspace"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@string/key_google"/>
+        <provider android:authorities="com.nutspace.app.blehunter.provider" android:exported="true" android:name="com.nut.blehunter.provider.DataContentProvider">
+            <grant-uri-permission android:pathPattern=".*"/>
+        </provider>
+        <service android:name="com.nut.blehunter.ble.BLEService" android:process="com.nutspace.bleservice"/>
+        <service android:name="com.nut.blehunter.service.NutTrackerService"/>
+        <service android:exported="true" android:name="com.nut.blehunter.dfu.DfuService">
+            <intent-filter>
+                <action android:name="no.nordicsemi.android.action.DFU_UPLOAD"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.nut.blehunter.broadcast.BootCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.nut.blehunter.broadcast.NetworkMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.nut.blehunter.broadcast.BluetoothStateChangedReceiver">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:label="@string/app_name" android:name="com.nut.blehunter.ui.WelcomeActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/title_activity_report_log" android:name="com.nut.blehunter.ui.ReportLogActivity" android:process=":com.nutspace.app.report" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.nutspace.app.SEND_LOG"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.nut.blehunter.ui.NutDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.SilenceRepeatActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTask" android:name="com.nut.blehunter.ui.Main2Activity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="zizainut"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/title_activity_bind_device" android:launchMode="singleTop" android:name="com.nut.blehunter.ui.BindDeviceActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_login" android:name="com.nut.blehunter.ui.LoginActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:label="@string/app_name" android:name="com.facebook.LoginActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:launchMode="singleTask" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="\ 1101314827"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.tencent.connect.common.AssistActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.nut.blehunter.ui.RegisterActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.NutSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.JumpWebViewActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.MeEditActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.AboutNutActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.NotDisturbActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.SelectWiFiActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.BindPhoneActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.DialogContainerActivity" android:screenOrientation="portrait" android:theme="@style/MyDialogActivityTheme"/>
+        <activity android:name="com.nut.blehunter.ui.DeclareLostActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.InputPhoneNumberActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.SetFindRegionActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.FindRegionActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.MapLocationActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.SendMailActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.GuidePagerActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.BindAnimationPaperActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.dfu.DfuActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.PhoneAlertSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.qrcode.CaptureActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.ScanDeviceActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.LookForShareActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.ShareManageActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.DialogBoxForPushActivity" android:screenOrientation="portrait" android:theme="@style/MyDialogActivityTheme"/> //裁剪图片
+<activity android:name="com.soundcloud.android.crop.CropImageActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.SilencesActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.SilenceAddOrEditActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.SettingAlertSoundActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.AppConfigActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.NutConfigActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.ConnectRecordActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.ResetPasswordActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.QuickAddActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.LocationRecordActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.NotificationCenterActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.nut.blehunter.ui.BindEmailActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bingerz.android.countrycodepicker.CountryCodeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.AddFriendActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.FriendManageActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.NewFriendActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.NotDisturbSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.LocationFriendFailedTipsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.SafeRegionManageActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.SetSafeRegionActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.nut.blehunter.ui.InputNameActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.nut.blehunter.ui.UserRatingActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.Transparent"/>
+        <activity android:name="com.nut.blehunter.ui.LogActivity" android:screenOrientation="portrait"/> //微信注册app回调
+<activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTop" android:name="com.nut.blehunter.wxapi.WXEntryActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:name="com.nut.blehunter.wxapi.AppRegister" android:permission="com.tencent.mm.plugin.permission.SEND">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.nut.blehunter.push.fcm.FCMMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.nut.blehunter.push.fcm.FCMInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.amap.api.location.APSService"/>
+        <service android:name="com.nut.blehunter.push.umeng.UmengPushIntentService" android:process=":push"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:name="com.twitter.sdk.android.core.identity.OAuthActivity"/>
+        <activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:exported="false" android:icon="@drawable/tw__transparent" android:label="@string/kit_name" android:name="com.twitter.sdk.android.core.identity.ShareEmailActivity"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.nut.blehunter"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"/>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.nut.blehunter.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <receiver android:exported="false" android:name="com.umeng.message.NotificationProxyBroadcastReceiver"/>
+        <receiver android:name="com.umeng.message.SystemReceiver" android:process=":push">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.umeng.message.MessageReceiver" android:process=":push">
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.umeng.message.ElectionReceiver" android:process=":push">
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.ELECTION_RESULT_V4"/>
+                <category android:name="umeng"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.umeng.message.RegistrationReceiver">
+            <intent-filter>
+                <action android:name="com.nut.blehunter.intent.action.COMMAND"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.umeng.message.UmengMessageBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="true" android:label="PushService" android:name="com.umeng.message.UmengService" android:process=":push">
+            <intent-filter>
+                <action android:name="com.nut.blehunter.intent.action.START"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.nut.blehunter.intent.action.COCKROACH"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING_V4"/>
+                <category android:name="umeng"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.umeng.message.UmengIntentService" android:process=":push"/>
+        <service android:exported="true" android:name="com.umeng.message.UmengMessageIntentReceiverService" android:process=":push">
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.android.agoo.client.ElectionReceiverService"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.umeng.message.UmengMessageCallbackHandlerService">
+            <intent-filter>
+                <action android:name="com.umeng.messge.registercallback.action"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.unregistercallback.action"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.message.handler.action"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.autoupdate.handler.action"/>
+            </intent-filter>
+        </service>
+        <service android:exported="false" android:name="com.umeng.message.UmengDownloadResourceService"/>
+        <service android:exported="false" android:name="com.umeng.message.local.UmengLocalNotificationService"/>
+        <receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+    </application>
+</manifest>

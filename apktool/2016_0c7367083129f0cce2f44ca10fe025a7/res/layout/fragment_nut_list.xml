@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/fl_home_status" android:background="@color/home_status_color2" android:layout_width="fill_parent" android:layout_height="32.0dip">
+        <TextView android:textSize="@dimen/t4" android:textColor="@color/c1" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_home_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_email_not_verify" android:drawablePadding="8.0dip" android:drawableStart="@drawable/ic_warning_email" />
+    </FrameLayout>
+    <android.support.v7.widget.RecyclerView android:id="@id/rv_list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:id="@id/rl_add_nut" layout="@layout/include_bind_nut" />
+</LinearLayout>

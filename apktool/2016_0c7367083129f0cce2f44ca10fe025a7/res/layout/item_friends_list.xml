@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="58.0dip" android:layout_height="58.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.nut.blehunter.ui.widget.CircleImageView android:layout_gravity="center" android:id="@id/civ_friends_avatar" android:layout_width="52.0dip" android:layout_height="52.0dip" android:src="@drawable/img_default_pic" app:civ_border_width="2.0dip" app:civ_border_color="@color/c5" app:civ_overlay="@drawable/img_friend_overlay" />
+</FrameLayout>

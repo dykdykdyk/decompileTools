@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/tv_find_mode" android:text="@string/settings_tab_text_mode_look_for" android:drawableStart="@drawable/ic_bar_seek" android:drawableEnd="@color/c5" style="@style/SettingsItemText.Checkable" />
+        <CheckBox android:id="@id/cb_find_mode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/ic_switch_selector" android:layout_centerVertical="true" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <View android:id="@id/divider_share_manager" android:background="@color/c3" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="64.0dip" />
+    <TextView android:id="@id/tv_share_manage" android:visibility="gone" android:text="@string/settings_share_manage" android:drawableStart="@drawable/ic_bar_share" style="@style/SettingsItemText" />
+    <TextView android:textSize="@dimen/t4" android:textColor="@color/c2" android:background="@drawable/bg_list_empty" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/settings_find_mode_tips" />
+    <TextView android:id="@id/tv_phone_alert" android:text="@string/settings_phone_alert" android:drawableStart="@drawable/ic_bar_warn" style="@style/SettingsItemText" />
+    <View android:id="@id/divider_tracker_mode" android:background="@color/c3" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="64.0dip" />
+    <RelativeLayout android:id="@id/rl_anti_lose" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@id/tv_setting_device_alert" android:text="@string/settings_device_alert" android:drawableStart="@drawable/ic_bar_drop" style="@style/SettingsItemText.Checkable" />
+        <CheckBox android:id="@id/cb_device_alert" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/ic_switch_selector" android:layout_centerVertical="true" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <include android:id="@id/divider_page_anti_lose" layout="@layout/item_page_stub_border_divider_20" />
+    <TextView android:id="@id/tv_qa" android:text="@string/more_list_features" android:drawableStart="@drawable/ic_bar_question" style="@style/SettingsItemText" />
+    <View android:id="@id/divider_dfu" android:background="@color/c3" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="64.0dip" />
+    <RelativeLayout android:id="@id/rl_dfu" android:background="@drawable/bg_more_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_height">
+        <TextView android:textSize="@dimen/t5" android:textColor="@color/c15" android:gravity="center" android:id="@id/tv_dfu" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settings_device_firmware_update" android:drawablePadding="16.0dip" android:layout_centerVertical="true" android:drawableStart="@drawable/ic_bar_firmware" />
+        <TextView android:textSize="@dimen/t4" android:textColor="@color/c5" android:gravity="center" android:id="@id/tv_dfu_new" android:background="@drawable/ic_new_find" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_new_find" android:layout_centerVertical="true" android:layout_toEndOf="@id/tv_dfu" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_list_more" android:layout_centerVertical="true" android:layout_marginEnd="16.0dip" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/t1" android:textColor="@color/c1" android:gravity="center_vertical" android:id="@id/tv_nut_settings_config" android:background="@drawable/bg_more_item_selector" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_height" android:text="@string/settings_list_config" android:drawableEnd="@drawable/ic_list_more" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" />
+    <include layout="@layout/item_page_stub_border_divider_20" />
+    <TextView android:textSize="@dimen/t1" android:textColor="@color/c1" android:gravity="center" android:id="@id/tv_delete" android:background="@drawable/bg_more_item_selector" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_height" android:text="@string/settings_delete_nut" />
+    <View android:background="@drawable/bg_list_border_top_pressed" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="20.0dip" />
+</LinearLayout>

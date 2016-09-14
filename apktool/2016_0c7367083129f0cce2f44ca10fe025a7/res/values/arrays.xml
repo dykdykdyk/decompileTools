@@ -1,0 +1,2437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="c000">
+        <item>阿富汗</item>
+        <item>Afghanistan</item>
+        <item>93</item>
+        <item>AF</item>
+    </string-array>
+    <string-array name="c001">
+        <item>阿尔巴尼亚</item>
+        <item>Albania</item>
+        <item>355</item>
+        <item>AL</item>
+    </string-array>
+    <string-array name="c002">
+        <item>阿尔及利亚</item>
+        <item>Algeria</item>
+        <item>213</item>
+        <item>DZ</item>
+    </string-array>
+    <string-array name="c003">
+        <item>美属萨摩亚</item>
+        <item>American Samoa</item>
+        <item>1684</item>
+        <item>AS</item>
+    </string-array>
+    <string-array name="c004">
+        <item>安道尔</item>
+        <item>Andorra</item>
+        <item>376</item>
+        <item>AD</item>
+    </string-array>
+    <string-array name="c005">
+        <item>安哥拉</item>
+        <item>Angola</item>
+        <item>244</item>
+        <item>AO</item>
+    </string-array>
+    <string-array name="c006">
+        <item>安圭拉</item>
+        <item>Anguilla</item>
+        <item>1264</item>
+        <item>AI</item>
+    </string-array>
+    <string-array name="c007">
+        <item>安提瓜和巴布达</item>
+        <item>Antigua and Barbuda</item>
+        <item>1268</item>
+        <item>AG</item>
+    </string-array>
+    <string-array name="c008">
+        <item>阿根廷</item>
+        <item>Argentina</item>
+        <item>54</item>
+        <item>AR</item>
+    </string-array>
+    <string-array name="c009">
+        <item>亚美尼亚</item>
+        <item>Armenia</item>
+        <item>374</item>
+        <item>AM</item>
+    </string-array>
+    <string-array name="c010">
+        <item>阿鲁巴</item>
+        <item>Aruba</item>
+        <item>297</item>
+        <item>AW</item>
+    </string-array>
+    <string-array name="c011">
+        <item>澳大利亚</item>
+        <item>Australia</item>
+        <item>61</item>
+        <item>AU</item>
+    </string-array>
+    <string-array name="c012">
+        <item>奥地利</item>
+        <item>Austria</item>
+        <item>43</item>
+        <item>AT</item>
+    </string-array>
+    <string-array name="c013">
+        <item>阿塞拜疆</item>
+        <item>Azerbaijan</item>
+        <item>994</item>
+        <item>AZ</item>
+    </string-array>
+    <string-array name="c014">
+        <item>巴哈马</item>
+        <item>The Bahamas</item>
+        <item>1242</item>
+        <item>BS</item>
+    </string-array>
+    <string-array name="c015">
+        <item>巴林</item>
+        <item>Bahrain</item>
+        <item>973</item>
+        <item>BH</item>
+    </string-array>
+    <string-array name="c016">
+        <item>孟加拉国</item>
+        <item>Bangladesh</item>
+        <item>880</item>
+        <item>BD</item>
+    </string-array>
+    <string-array name="c017">
+        <item>巴巴多斯</item>
+        <item>Barbados</item>
+        <item>1246</item>
+        <item>BB</item>
+    </string-array>
+    <string-array name="c018">
+        <item>白俄罗斯</item>
+        <item>Belarus</item>
+        <item>375</item>
+        <item>BY</item>
+    </string-array>
+    <string-array name="c019">
+        <item>比利时</item>
+        <item>Belgium</item>
+        <item>32</item>
+        <item>BE</item>
+    </string-array>
+    <string-array name="c020">
+        <item>伯利兹</item>
+        <item>Belize</item>
+        <item>501</item>
+        <item>BZ</item>
+    </string-array>
+    <string-array name="c021">
+        <item>贝宁</item>
+        <item>Benin</item>
+        <item>229</item>
+        <item>BJ</item>
+    </string-array>
+    <string-array name="c022">
+        <item>百慕大</item>
+        <item>Bermuda</item>
+        <item>1441</item>
+        <item>BM</item>
+    </string-array>
+    <string-array name="c023">
+        <item>不丹</item>
+        <item>Bhutan</item>
+        <item>975</item>
+        <item>BT</item>
+    </string-array>
+    <string-array name="c024">
+        <item>玻利维亚</item>
+        <item>Bolivia</item>
+        <item>591</item>
+        <item>BO</item>
+    </string-array>
+    <string-array name="c025">
+        <item>波斯尼亚和黑塞哥维那</item>
+        <item>Bosnia and Herzegovina</item>
+        <item>387</item>
+        <item>BA</item>
+    </string-array>
+    <string-array name="c026">
+        <item>博茨瓦纳</item>
+        <item>Botswana</item>
+        <item>267</item>
+        <item>BW</item>
+    </string-array>
+    <string-array name="c027">
+        <item>巴西</item>
+        <item>Brazil</item>
+        <item>55</item>
+        <item>BR</item>
+    </string-array>
+    <string-array name="c028">
+        <item>英属印度洋领地</item>
+        <item>British Indian Ocean Territory</item>
+        <item>246</item>
+        <item>IO</item>
+    </string-array>
+    <string-array name="c029">
+        <item>英属维京群岛</item>
+        <item>British Virgin Islands</item>
+        <item>1284</item>
+        <item>VG</item>
+    </string-array>
+    <string-array name="c030">
+        <item>文莱</item>
+        <item>Brunei</item>
+        <item>673</item>
+        <item>BN</item>
+    </string-array>
+    <string-array name="c031">
+        <item>保加利亚</item>
+        <item>Bulgaria</item>
+        <item>359</item>
+        <item>BG</item>
+    </string-array>
+    <string-array name="c032">
+        <item>布基纳法索</item>
+        <item>Burkina Faso</item>
+        <item>226</item>
+        <item>BF</item>
+    </string-array>
+    <string-array name="c033">
+        <item>布隆迪</item>
+        <item>Burundi</item>
+        <item>257</item>
+        <item>BI</item>
+    </string-array>
+    <string-array name="c034">
+        <item>柬埔寨</item>
+        <item>Cambodia</item>
+        <item>855</item>
+        <item>KH</item>
+    </string-array>
+    <string-array name="c035">
+        <item>喀麦隆</item>
+        <item>Cameroon</item>
+        <item>237</item>
+        <item>CM</item>
+    </string-array>
+    <string-array name="c036">
+        <item>加拿大</item>
+        <item>Canada</item>
+        <item>1</item>
+        <item>CA</item>
+    </string-array>
+    <string-array name="c037">
+        <item>佛得角</item>
+        <item>Cape Verde</item>
+        <item>238</item>
+        <item>CV</item>
+    </string-array>
+    <string-array name="c038">
+        <item>荷兰加勒比区</item>
+        <item>Caribbean Netherlands</item>
+        <item>599</item>
+        <item>BQ</item>
+    </string-array>
+    <string-array name="c039">
+        <item>开曼群岛</item>
+        <item>Cayman Islands</item>
+        <item>1345</item>
+        <item>KY</item>
+    </string-array>
+    <string-array name="c040">
+        <item>中非共和国</item>
+        <item>Central African Republic</item>
+        <item>236</item>
+        <item>CF</item>
+    </string-array>
+    <string-array name="c041">
+        <item>乍得</item>
+        <item>Chad</item>
+        <item>235</item>
+        <item>TD</item>
+    </string-array>
+    <string-array name="c042">
+        <item>智利</item>
+        <item>Chile</item>
+        <item>56</item>
+        <item>CL</item>
+    </string-array>
+    <string-array name="c043">
+        <item>中国</item>
+        <item>China</item>
+        <item>86</item>
+        <item>CN</item>
+    </string-array>
+    <string-array name="c044">
+        <item>哥伦比亚</item>
+        <item>Colombia</item>
+        <item>57</item>
+        <item>CO</item>
+    </string-array>
+    <string-array name="c045">
+        <item>科摩罗</item>
+        <item>Comoros</item>
+        <item>269</item>
+        <item>KM</item>
+    </string-array>
+    <string-array name="c046">
+        <item>刚果民主共和国</item>
+        <item>Democratic Republic of the Congo</item>
+        <item>243</item>
+        <item>CD</item>
+    </string-array>
+    <string-array name="c047">
+        <item>刚果共和国</item>
+        <item>Republic of the Congo</item>
+        <item>242</item>
+        <item>CG</item>
+    </string-array>
+    <string-array name="c048">
+        <item>库克群岛</item>
+        <item>Cook Islands</item>
+        <item>682</item>
+        <item>CK</item>
+    </string-array>
+    <string-array name="c049">
+        <item>哥斯达黎加</item>
+        <item>Costa Rica</item>
+        <item>506</item>
+        <item>CR</item>
+    </string-array>
+    <string-array name="c050">
+        <item>科特迪瓦</item>
+        <item>Côte d’Ivoire</item>
+        <item>225</item>
+        <item>CI</item>
+    </string-array>
+    <string-array name="c051">
+        <item>克罗地亚</item>
+        <item>Croatia</item>
+        <item>385</item>
+        <item>HR</item>
+    </string-array>
+    <string-array name="c052">
+        <item>古巴</item>
+        <item>Cuba</item>
+        <item>53</item>
+        <item>CU</item>
+    </string-array>
+    <string-array name="c053">
+        <item>库拉索</item>
+        <item>Curaçao</item>
+        <item>599</item>
+        <item>CW</item>
+    </string-array>
+    <string-array name="c054">
+        <item>塞浦路斯</item>
+        <item>Cyprus</item>
+        <item>357</item>
+        <item>CY</item>
+    </string-array>
+    <string-array name="c055">
+        <item>捷克</item>
+        <item>Czech Republic</item>
+        <item>420</item>
+        <item>CZ</item>
+    </string-array>
+    <string-array name="c056">
+        <item>丹麦</item>
+        <item>Denmark</item>
+        <item>45</item>
+        <item>DK</item>
+    </string-array>
+    <string-array name="c057">
+        <item>吉布提</item>
+        <item>Djibouti</item>
+        <item>253</item>
+        <item>DJ</item>
+    </string-array>
+    <string-array name="c058">
+        <item>多米尼加</item>
+        <item>Dominica</item>
+        <item>1767</item>
+        <item>DM</item>
+    </string-array>
+    <string-array name="c059">
+        <item>多米尼加共和国</item>
+        <item>Dominican Republic</item>
+        <item>1809</item>
+        <item>DO</item>
+    </string-array>
+    <string-array name="c060">
+        <item>厄瓜多尔</item>
+        <item>Ecuador</item>
+        <item>593</item>
+        <item>EC</item>
+    </string-array>
+    <string-array name="c061">
+        <item>埃及</item>
+        <item>Egypt</item>
+        <item>20</item>
+        <item>EG</item>
+    </string-array>
+    <string-array name="c062">
+        <item>萨尔瓦多</item>
+        <item>El Salvador</item>
+        <item>503</item>
+        <item>SV</item>
+    </string-array>
+    <string-array name="c063">
+        <item>赤道几内亚</item>
+        <item>Equatorial Guinea</item>
+        <item>240</item>
+        <item>GQ</item>
+    </string-array>
+    <string-array name="c064">
+        <item>厄立特里亚</item>
+        <item>Eritrea</item>
+        <item>291</item>
+        <item>ER</item>
+    </string-array>
+    <string-array name="c065">
+        <item>爱沙尼亚</item>
+        <item>Estonia</item>
+        <item>372</item>
+        <item>EE</item>
+    </string-array>
+    <string-array name="c066">
+        <item>埃塞俄比亚</item>
+        <item>Ethiopia</item>
+        <item>251</item>
+        <item>ET</item>
+    </string-array>
+    <string-array name="c067">
+        <item>福克兰群岛</item>
+        <item>Falkland Islands</item>
+        <item>500</item>
+        <item>FK</item>
+    </string-array>
+    <string-array name="c068">
+        <item>法罗群岛</item>
+        <item>Faroe Islands</item>
+        <item>298</item>
+        <item>FO</item>
+    </string-array>
+    <string-array name="c069">
+        <item>斐济</item>
+        <item>Fiji</item>
+        <item>679</item>
+        <item>FJ</item>
+    </string-array>
+    <string-array name="c070">
+        <item>芬兰</item>
+        <item>Finland</item>
+        <item>358</item>
+        <item>FI</item>
+    </string-array>
+    <string-array name="c071">
+        <item>法国</item>
+        <item>France</item>
+        <item>33</item>
+        <item>FR</item>
+    </string-array>
+    <string-array name="c072">
+        <item>法属圭亚那</item>
+        <item>French Guiana</item>
+        <item>594</item>
+        <item>GF</item>
+    </string-array>
+    <string-array name="c073">
+        <item>法属波利尼西亚</item>
+        <item>French Polynesia</item>
+        <item>689</item>
+        <item>PF</item>
+    </string-array>
+    <string-array name="c074">
+        <item>加蓬共和国</item>
+        <item>Gabon</item>
+        <item>241</item>
+        <item>GA</item>
+    </string-array>
+    <string-array name="c075">
+        <item>冈比亚</item>
+        <item>The Gambia</item>
+        <item>220</item>
+        <item>GM</item>
+    </string-array>
+    <string-array name="c076">
+        <item>格鲁吉亚</item>
+        <item>Georgia</item>
+        <item>995</item>
+        <item>GE</item>
+    </string-array>
+    <string-array name="c077">
+        <item>德国</item>
+        <item>Germany</item>
+        <item>49</item>
+        <item>DE</item>
+    </string-array>
+    <string-array name="c078">
+        <item>加纳</item>
+        <item>Ghana</item>
+        <item>233</item>
+        <item>GH</item>
+    </string-array>
+    <string-array name="c079">
+        <item>直布罗陀</item>
+        <item>Gibraltar</item>
+        <item>350</item>
+        <item>GI</item>
+    </string-array>
+    <string-array name="c080">
+        <item>希腊</item>
+        <item>Greece</item>
+        <item>30</item>
+        <item>GR</item>
+    </string-array>
+    <string-array name="c081">
+        <item>格陵兰</item>
+        <item>Greenland</item>
+        <item>299</item>
+        <item>GL</item>
+    </string-array>
+    <string-array name="c082">
+        <item>格林纳达岛</item>
+        <item>Grenada</item>
+        <item>1473</item>
+        <item>GD</item>
+    </string-array>
+    <string-array name="c083">
+        <item>瓜德罗普</item>
+        <item>Guadeloupe</item>
+        <item>590</item>
+        <item>GP</item>
+    </string-array>
+    <string-array name="c084">
+        <item>关岛</item>
+        <item>Guam</item>
+        <item>1671</item>
+        <item>GU</item>
+    </string-array>
+    <string-array name="c085">
+        <item>危地马拉</item>
+        <item>Guatemala</item>
+        <item>502</item>
+        <item>GT</item>
+    </string-array>
+    <string-array name="c086">
+        <item>几内亚</item>
+        <item>Guinea</item>
+        <item>224</item>
+        <item>GN</item>
+    </string-array>
+    <string-array name="c087">
+        <item>几内亚比绍共和国</item>
+        <item>Guinea-Bissau</item>
+        <item>245</item>
+        <item>GW</item>
+    </string-array>
+    <string-array name="c088">
+        <item>圭亚那</item>
+        <item>Guyana</item>
+        <item>592</item>
+        <item>GY</item>
+    </string-array>
+    <string-array name="c089">
+        <item>海地</item>
+        <item>Haiti</item>
+        <item>509</item>
+        <item>HT</item>
+    </string-array>
+    <string-array name="c090">
+        <item>洪都拉斯</item>
+        <item>Honduras</item>
+        <item>504</item>
+        <item>HN</item>
+    </string-array>
+    <string-array name="c091">
+        <item>中国香港特别行政区</item>
+        <item>Hong Kong</item>
+        <item>852</item>
+        <item>HK</item>
+    </string-array>
+    <string-array name="c092">
+        <item>匈牙利</item>
+        <item>Hungary</item>
+        <item>36</item>
+        <item>HU</item>
+    </string-array>
+    <string-array name="c093">
+        <item>冰岛</item>
+        <item>Iceland</item>
+        <item>354</item>
+        <item>IS</item>
+    </string-array>
+    <string-array name="c094">
+        <item>印度</item>
+        <item>India</item>
+        <item>91</item>
+        <item>IN</item>
+    </string-array>
+    <string-array name="c095">
+        <item>印度尼西亚</item>
+        <item>Indonesia</item>
+        <item>62</item>
+        <item>ID</item>
+    </string-array>
+    <string-array name="c096">
+        <item>伊朗</item>
+        <item>Iran</item>
+        <item>98</item>
+        <item>IR</item>
+    </string-array>
+    <string-array name="c097">
+        <item>伊拉克</item>
+        <item>Iraq</item>
+        <item>964</item>
+        <item>IQ</item>
+    </string-array>
+    <string-array name="c098">
+        <item>爱尔兰</item>
+        <item>Ireland</item>
+        <item>353</item>
+        <item>IE</item>
+    </string-array>
+    <string-array name="c099">
+        <item>以色列</item>
+        <item>Israel</item>
+        <item>972</item>
+        <item>IL</item>
+    </string-array>
+    <string-array name="c100">
+        <item>意大利</item>
+        <item>Italy</item>
+        <item>39</item>
+        <item>IT</item>
+    </string-array>
+    <string-array name="c101">
+        <item>牙买加</item>
+        <item>Jamaica</item>
+        <item>1876</item>
+        <item>JM</item>
+    </string-array>
+    <string-array name="c102">
+        <item>日本</item>
+        <item>Japan</item>
+        <item>81</item>
+        <item>JP</item>
+    </string-array>
+    <string-array name="c103">
+        <item>约旦</item>
+        <item>Jordan</item>
+        <item>962</item>
+        <item>JO</item>
+    </string-array>
+    <string-array name="c104">
+        <item>哈萨克斯坦</item>
+        <item>Kazakhstan</item>
+        <item>7</item>
+        <item>KZ</item>
+    </string-array>
+    <string-array name="c105">
+        <item>肯尼亚</item>
+        <item>Kenya</item>
+        <item>254</item>
+        <item>KE</item>
+    </string-array>
+    <string-array name="c106">
+        <item>基里巴斯</item>
+        <item>Kiribati</item>
+        <item>686</item>
+        <item>KI</item>
+    </string-array>
+    <string-array name="c107">
+        <item>科威特</item>
+        <item>Kuwait</item>
+        <item>965</item>
+        <item>KW</item>
+    </string-array>
+    <string-array name="c108">
+        <item>吉尔吉斯斯坦</item>
+        <item>Kyrgyzstan</item>
+        <item>996</item>
+        <item>KG</item>
+    </string-array>
+    <string-array name="c109">
+        <item>老挝</item>
+        <item>Laos</item>
+        <item>856</item>
+        <item>LA</item>
+    </string-array>
+    <string-array name="c110">
+        <item>拉脱维亚</item>
+        <item>Latvia</item>
+        <item>371</item>
+        <item>LV</item>
+    </string-array>
+    <string-array name="c111">
+        <item>黎巴嫩</item>
+        <item>Lebanon</item>
+        <item>961</item>
+        <item>LB</item>
+    </string-array>
+    <string-array name="c112">
+        <item>莱索托</item>
+        <item>Lesotho</item>
+        <item>266</item>
+        <item>LS</item>
+    </string-array>
+    <string-array name="c113">
+        <item>利比里亚</item>
+        <item>Liberia</item>
+        <item>231</item>
+        <item>LR</item>
+    </string-array>
+    <string-array name="c114">
+        <item>利比亚</item>
+        <item>Libya</item>
+        <item>218</item>
+        <item>LY</item>
+    </string-array>
+    <string-array name="c115">
+        <item>列支敦士登</item>
+        <item>Liechtenstein</item>
+        <item>423</item>
+        <item>LI</item>
+    </string-array>
+    <string-array name="c116">
+        <item>立陶宛</item>
+        <item>Lithuania</item>
+        <item>370</item>
+        <item>LT</item>
+    </string-array>
+    <string-array name="c117">
+        <item>卢森堡</item>
+        <item>Luxembourg</item>
+        <item>352</item>
+        <item>LU</item>
+    </string-array>
+    <string-array name="c118">
+        <item>中国澳门特别行政区</item>
+        <item>Macau</item>
+        <item>853</item>
+        <item>MO</item>
+    </string-array>
+    <string-array name="c119">
+        <item>马其顿</item>
+        <item>Macedonia</item>
+        <item>389</item>
+        <item>MK</item>
+    </string-array>
+    <string-array name="c120">
+        <item>马达加斯加</item>
+        <item>Madagascar</item>
+        <item>261</item>
+        <item>MG</item>
+    </string-array>
+    <string-array name="c121">
+        <item>马拉维</item>
+        <item>Malawi</item>
+        <item>265</item>
+        <item>MW</item>
+    </string-array>
+    <string-array name="c122">
+        <item>马来西亚</item>
+        <item>Malaysia</item>
+        <item>60</item>
+        <item>MY</item>
+    </string-array>
+    <string-array name="c123">
+        <item>马尔代夫</item>
+        <item>Maldives</item>
+        <item>960</item>
+        <item>MV</item>
+    </string-array>
+    <string-array name="c124">
+        <item>马里</item>
+        <item>Mali</item>
+        <item>223</item>
+        <item>ML</item>
+    </string-array>
+    <string-array name="c125">
+        <item>马耳他</item>
+        <item>Malta</item>
+        <item>356</item>
+        <item>MT</item>
+    </string-array>
+    <string-array name="c126">
+        <item>马绍尔群岛</item>
+        <item>Marshall Islands</item>
+        <item>692</item>
+        <item>MH</item>
+    </string-array>
+    <string-array name="c127">
+        <item>马提尼克</item>
+        <item>Martinique</item>
+        <item>596</item>
+        <item>MQ</item>
+    </string-array>
+    <string-array name="c128">
+        <item>毛里塔尼亚</item>
+        <item>Mauritania</item>
+        <item>222</item>
+        <item>MR</item>
+    </string-array>
+    <string-array name="c129">
+        <item>毛里求斯</item>
+        <item>Mauritius</item>
+        <item>230</item>
+        <item>MU</item>
+    </string-array>
+    <string-array name="c130">
+        <item>墨西哥</item>
+        <item>Mexico</item>
+        <item>52</item>
+        <item>MX</item>
+    </string-array>
+    <string-array name="c131">
+        <item>密克罗尼西亚联邦</item>
+        <item>Federated States of Micronesia</item>
+        <item>691</item>
+        <item>FM</item>
+    </string-array>
+    <string-array name="c132">
+        <item>摩尔多瓦</item>
+        <item>Moldova</item>
+        <item>373</item>
+        <item>MD</item>
+    </string-array>
+    <string-array name="c133">
+        <item>摩纳哥</item>
+        <item>Monaco</item>
+        <item>377</item>
+        <item>MC</item>
+    </string-array>
+    <string-array name="c134">
+        <item>蒙古</item>
+        <item>Mongolia</item>
+        <item>976</item>
+        <item>MN</item>
+    </string-array>
+    <string-array name="c135">
+        <item>黑山共和国</item>
+        <item>Montenegro</item>
+        <item>382</item>
+        <item>ME</item>
+    </string-array>
+    <string-array name="c136">
+        <item>蒙特塞拉特</item>
+        <item>Montserrat</item>
+        <item>1664</item>
+        <item>MS</item>
+    </string-array>
+    <string-array name="c137">
+        <item>摩洛哥</item>
+        <item>Morocco</item>
+        <item>212</item>
+        <item>MA</item>
+    </string-array>
+    <string-array name="c138">
+        <item>莫桑比克</item>
+        <item>Mozambique</item>
+        <item>258</item>
+        <item>MZ</item>
+    </string-array>
+    <string-array name="c139">
+        <item>缅甸</item>
+        <item>Myanmar</item>
+        <item>95</item>
+        <item>MM</item>
+    </string-array>
+    <string-array name="c140">
+        <item>纳米比亚</item>
+        <item>Namibia</item>
+        <item>264</item>
+        <item>NA</item>
+    </string-array>
+    <string-array name="c141">
+        <item>瑙鲁</item>
+        <item>Nauru</item>
+        <item>674</item>
+        <item>NR</item>
+    </string-array>
+    <string-array name="c142">
+        <item>尼泊尔</item>
+        <item>Nepal</item>
+        <item>977</item>
+        <item>NP</item>
+    </string-array>
+    <string-array name="c143">
+        <item>荷兰</item>
+        <item>Netherlands</item>
+        <item>31</item>
+        <item>NL</item>
+    </string-array>
+    <string-array name="c144">
+        <item>新喀里多尼亚</item>
+        <item>New Caledonia</item>
+        <item>687</item>
+        <item>NC</item>
+    </string-array>
+    <string-array name="c145">
+        <item>新西兰</item>
+        <item>New Zealand</item>
+        <item>64</item>
+        <item>NZ</item>
+    </string-array>
+    <string-array name="c146">
+        <item>尼加拉瓜</item>
+        <item>Nicaragua</item>
+        <item>505</item>
+        <item>NI</item>
+    </string-array>
+    <string-array name="c147">
+        <item>尼日尔</item>
+        <item>Niger</item>
+        <item>227</item>
+        <item>NE</item>
+    </string-array>
+    <string-array name="c148">
+        <item>尼日利亚</item>
+        <item>Nigeria</item>
+        <item>234</item>
+        <item>NG</item>
+    </string-array>
+    <string-array name="c149">
+        <item>纽埃</item>
+        <item>Niue</item>
+        <item>683</item>
+        <item>NU</item>
+    </string-array>
+    <string-array name="c150">
+        <item>诺福克群岛</item>
+        <item>Norfolk Island</item>
+        <item>672</item>
+        <item>NF</item>
+    </string-array>
+    <string-array name="c151">
+        <item>朝鲜</item>
+        <item>North Korea</item>
+        <item>850</item>
+        <item>KP</item>
+    </string-array>
+    <string-array name="c152">
+        <item>北马里亚纳群岛</item>
+        <item>Northern Mariana Islands</item>
+        <item>1670</item>
+        <item>MP</item>
+    </string-array>
+    <string-array name="c153">
+        <item>挪威</item>
+        <item>Norway</item>
+        <item>47</item>
+        <item>NO</item>
+    </string-array>
+    <string-array name="c154">
+        <item>阿曼</item>
+        <item>Oman</item>
+        <item>968</item>
+        <item>OM</item>
+    </string-array>
+    <string-array name="c155">
+        <item>巴基斯坦</item>
+        <item>Pakistan</item>
+        <item>92</item>
+        <item>PK</item>
+    </string-array>
+    <string-array name="c156">
+        <item>帛琉</item>
+        <item>Palau</item>
+        <item>680</item>
+        <item>PW</item>
+    </string-array>
+    <string-array name="c157">
+        <item>巴勒斯坦</item>
+        <item>Palestine</item>
+        <item>970</item>
+        <item>PS</item>
+    </string-array>
+    <string-array name="c158">
+        <item>巴拿马</item>
+        <item>Panama</item>
+        <item>507</item>
+        <item>PA</item>
+    </string-array>
+    <string-array name="c159">
+        <item>巴布亚新几内亚</item>
+        <item>Papua New Guinea</item>
+        <item>675</item>
+        <item>PG</item>
+    </string-array>
+    <string-array name="c160">
+        <item>巴拉圭</item>
+        <item>Paraguay</item>
+        <item>595</item>
+        <item>PY</item>
+    </string-array>
+    <string-array name="c161">
+        <item>秘鲁</item>
+        <item>Peru</item>
+        <item>51</item>
+        <item>PE</item>
+    </string-array>
+    <string-array name="c162">
+        <item>菲律宾</item>
+        <item>Philippines</item>
+        <item>63</item>
+        <item>PH</item>
+    </string-array>
+    <string-array name="c163">
+        <item>波兰</item>
+        <item>Poland</item>
+        <item>48</item>
+        <item>PL</item>
+    </string-array>
+    <string-array name="c164">
+        <item>葡萄牙</item>
+        <item>Portugal</item>
+        <item>351</item>
+        <item>PT</item>
+    </string-array>
+    <string-array name="c165">
+        <item>波多黎各</item>
+        <item>Puerto Rico</item>
+        <item>1</item>
+        <item>PR</item>
+    </string-array>
+    <string-array name="c166">
+        <item>卡塔尔</item>
+        <item>Qatar</item>
+        <item>974</item>
+        <item>QA</item>
+    </string-array>
+    <string-array name="c167">
+        <item>留尼汪</item>
+        <item>Réunion</item>
+        <item>262</item>
+        <item>RE</item>
+    </string-array>
+    <string-array name="c168">
+        <item>罗马尼亚</item>
+        <item>Romania</item>
+        <item>40</item>
+        <item>RO</item>
+    </string-array>
+    <string-array name="c169">
+        <item>俄罗斯</item>
+        <item>Russia</item>
+        <item>7</item>
+        <item>RU</item>
+    </string-array>
+    <string-array name="c170">
+        <item>卢旺达</item>
+        <item>Rwanda</item>
+        <item>250</item>
+        <item>RW</item>
+    </string-array>
+    <string-array name="c171">
+        <item>圣巴泰勒米</item>
+        <item>Saint Barthélemy</item>
+        <item>590</item>
+        <item>BL</item>
+    </string-array>
+    <string-array name="c172">
+        <item>圣赫勒拿</item>
+        <item>Saint Helena</item>
+        <item>290</item>
+        <item>SH</item>
+    </string-array>
+    <string-array name="c173">
+        <item>圣基茨和尼维斯</item>
+        <item>Saint Kitts and Nevis</item>
+        <item>1869</item>
+        <item>KN</item>
+    </string-array>
+    <string-array name="c174">
+        <item>圣卢西亚</item>
+        <item>Saint Lucia</item>
+        <item>1758</item>
+        <item>LC</item>
+    </string-array>
+    <string-array name="c175">
+        <item>法属圣马丁</item>
+        <item>Saint Martin</item>
+        <item>590</item>
+        <item>MF</item>
+    </string-array>
+    <string-array name="c176">
+        <item>法属圣皮埃尔和密克隆岛</item>
+        <item>Saint Pierre and Miquelon</item>
+        <item>508</item>
+        <item>PM</item>
+    </string-array>
+    <string-array name="c177">
+        <item>圣文森特和格林纳丁斯</item>
+        <item>Saint Vincent and the Grenadines</item>
+        <item>1784</item>
+        <item>VC</item>
+    </string-array>
+    <string-array name="c178">
+        <item>萨摩亚</item>
+        <item>Samoa</item>
+        <item>685</item>
+        <item>WS</item>
+    </string-array>
+    <string-array name="c179">
+        <item>圣马力诺</item>
+        <item>San Marino</item>
+        <item>378</item>
+        <item>SM</item>
+    </string-array>
+    <string-array name="c180">
+        <item>圣多美和普林西比民主共和国</item>
+        <item>São Tomé and Príncipe</item>
+        <item>239</item>
+        <item>ST</item>
+    </string-array>
+    <string-array name="c181">
+        <item>沙特阿拉伯</item>
+        <item>Saudi Arabia</item>
+        <item>966</item>
+        <item>SA</item>
+    </string-array>
+    <string-array name="c182">
+        <item>塞内加尔</item>
+        <item>Senegal</item>
+        <item>221</item>
+        <item>SN</item>
+    </string-array>
+    <string-array name="c183">
+        <item>塞尔维亚</item>
+        <item>Serbia</item>
+        <item>381</item>
+        <item>RS</item>
+    </string-array>
+    <string-array name="c184">
+        <item>塞舌尔</item>
+        <item>Seychelles</item>
+        <item>248</item>
+        <item>SC</item>
+    </string-array>
+    <string-array name="c185">
+        <item>塞拉利昂</item>
+        <item>Sierra Leone</item>
+        <item>232</item>
+        <item>SL</item>
+    </string-array>
+    <string-array name="c186">
+        <item>新加坡</item>
+        <item>Singapore</item>
+        <item>65</item>
+        <item>SG</item>
+    </string-array>
+    <string-array name="c187">
+        <item>荷属圣马丁</item>
+        <item>Sint Maarten</item>
+        <item>1721</item>
+        <item>SX</item>
+    </string-array>
+    <string-array name="c188">
+        <item>斯洛伐克</item>
+        <item>Slovakia</item>
+        <item>421</item>
+        <item>SK</item>
+    </string-array>
+    <string-array name="c189">
+        <item>斯洛文尼亚</item>
+        <item>Slovenia</item>
+        <item>386</item>
+        <item>SI</item>
+    </string-array>
+    <string-array name="c190">
+        <item>所罗门群岛</item>
+        <item>Solomon Islands</item>
+        <item>677</item>
+        <item>SB</item>
+    </string-array>
+    <string-array name="c191">
+        <item>索马里</item>
+        <item>Somalia</item>
+        <item>252</item>
+        <item>SO</item>
+    </string-array>
+    <string-array name="c192">
+        <item>南非</item>
+        <item>South Africa</item>
+        <item>27</item>
+        <item>ZA</item>
+    </string-array>
+    <string-array name="c193">
+        <item>韩国</item>
+        <item>South Korea</item>
+        <item>82</item>
+        <item>KR</item>
+    </string-array>
+    <string-array name="c194">
+        <item>南苏丹</item>
+        <item>South Sudan</item>
+        <item>211</item>
+        <item>SS</item>
+    </string-array>
+    <string-array name="c195">
+        <item>西班牙</item>
+        <item>Spain</item>
+        <item>34</item>
+        <item>ES</item>
+    </string-array>
+    <string-array name="c196">
+        <item>斯里兰卡</item>
+        <item>Sri Lanka</item>
+        <item>94</item>
+        <item>LK</item>
+    </string-array>
+    <string-array name="c197">
+        <item>苏丹</item>
+        <item>Sudan</item>
+        <item>249</item>
+        <item>SD</item>
+    </string-array>
+    <string-array name="c198">
+        <item>苏里南</item>
+        <item>Suriname</item>
+        <item>597</item>
+        <item>SR</item>
+    </string-array>
+    <string-array name="c199">
+        <item>斯威士兰</item>
+        <item>Swaziland</item>
+        <item>268</item>
+        <item>SZ</item>
+    </string-array>
+    <string-array name="c200">
+        <item>瑞典</item>
+        <item>Sweden</item>
+        <item>46</item>
+        <item>SE</item>
+    </string-array>
+    <string-array name="c201">
+        <item>瑞士</item>
+        <item>Switzerland</item>
+        <item>41</item>
+        <item>CH</item>
+    </string-array>
+    <string-array name="c202">
+        <item>叙利亚</item>
+        <item>Syria</item>
+        <item>963</item>
+        <item>SY</item>
+    </string-array>
+    <string-array name="c203">
+        <item>中国台湾</item>
+        <item>Taiwan</item>
+        <item>886</item>
+        <item>TW</item>
+    </string-array>
+    <string-array name="c204">
+        <item>塔吉克斯坦</item>
+        <item>Tajikistan</item>
+        <item>992</item>
+        <item>TJ</item>
+    </string-array>
+    <string-array name="c205">
+        <item>坦桑尼亚</item>
+        <item>Tanzania</item>
+        <item>255</item>
+        <item>TZ</item>
+    </string-array>
+    <string-array name="c206">
+        <item>泰国</item>
+        <item>Thailand</item>
+        <item>66</item>
+        <item>TH</item>
+    </string-array>
+    <string-array name="c207">
+        <item>东帝汶</item>
+        <item>Timor-Leste</item>
+        <item>670</item>
+        <item>TL</item>
+    </string-array>
+    <string-array name="c208">
+        <item>多哥</item>
+        <item>Togo</item>
+        <item>228</item>
+        <item>TG</item>
+    </string-array>
+    <string-array name="c209">
+        <item>托克劳</item>
+        <item>Tokelau</item>
+        <item>690</item>
+        <item>TK</item>
+    </string-array>
+    <string-array name="c210">
+        <item>汤加</item>
+        <item>Tonga</item>
+        <item>676</item>
+        <item>TO</item>
+    </string-array>
+    <string-array name="c211">
+        <item>特立尼达和多巴哥</item>
+        <item>Trinidad and Tobago</item>
+        <item>1868</item>
+        <item>TT</item>
+    </string-array>
+    <string-array name="c212">
+        <item>突尼斯</item>
+        <item>Tunisia</item>
+        <item>216</item>
+        <item>TN</item>
+    </string-array>
+    <string-array name="c213">
+        <item>土耳其</item>
+        <item>Turkey</item>
+        <item>90</item>
+        <item>TR</item>
+    </string-array>
+    <string-array name="c214">
+        <item>土库曼斯坦</item>
+        <item>Turkmenistan</item>
+        <item>993</item>
+        <item>TM</item>
+    </string-array>
+    <string-array name="c215">
+        <item>特克斯和凯科斯群岛</item>
+        <item>Turks and Caicos Islands</item>
+        <item>1649</item>
+        <item>TC</item>
+    </string-array>
+    <string-array name="c216">
+        <item>图瓦卢</item>
+        <item>Tuvalu</item>
+        <item>688</item>
+        <item>TV</item>
+    </string-array>
+    <string-array name="c217">
+        <item>美属维京群岛</item>
+        <item>U.S. Virgin Islands</item>
+        <item>1340</item>
+        <item>VI</item>
+    </string-array>
+    <string-array name="c218">
+        <item>乌干达</item>
+        <item>Uganda</item>
+        <item>256</item>
+        <item>UG</item>
+    </string-array>
+    <string-array name="c219">
+        <item>乌克兰</item>
+        <item>Ukraine</item>
+        <item>380</item>
+        <item>UA</item>
+    </string-array>
+    <string-array name="c220">
+        <item>阿联酋</item>
+        <item>United Arab Emirates</item>
+        <item>971</item>
+        <item>AE</item>
+    </string-array>
+    <string-array name="c221">
+        <item>英国</item>
+        <item>United Kingdom</item>
+        <item>44</item>
+        <item>GB</item>
+    </string-array>
+    <string-array name="c222">
+        <item>美国</item>
+        <item>United States</item>
+        <item>1</item>
+        <item>US</item>
+    </string-array>
+    <string-array name="c223">
+        <item>乌拉圭</item>
+        <item>Uruguay</item>
+        <item>598</item>
+        <item>UY</item>
+    </string-array>
+    <string-array name="c224">
+        <item>乌兹别克斯坦</item>
+        <item>Uzbekistan</item>
+        <item>998</item>
+        <item>UZ</item>
+    </string-array>
+    <string-array name="c225">
+        <item>瓦努阿图</item>
+        <item>Vanuatu</item>
+        <item>678</item>
+        <item>VU</item>
+    </string-array>
+    <string-array name="c226">
+        <item>梵蒂冈城</item>
+        <item>Vatican City</item>
+        <item>39</item>
+        <item>VA</item>
+    </string-array>
+    <string-array name="c227">
+        <item>委内瑞拉</item>
+        <item>Venezuela</item>
+        <item>58</item>
+        <item>VE</item>
+    </string-array>
+    <string-array name="c228">
+        <item>越南</item>
+        <item>Vietnam</item>
+        <item>84</item>
+        <item>VN</item>
+    </string-array>
+    <string-array name="c229">
+        <item>瓦利斯和富图纳</item>
+        <item>Wallis and Futuna</item>
+        <item>681</item>
+        <item>WF</item>
+    </string-array>
+    <string-array name="c230">
+        <item>也门</item>
+        <item>Yemen</item>
+        <item>967</item>
+        <item>YE</item>
+    </string-array>
+    <string-array name="c231">
+        <item>赞比亚</item>
+        <item>Zambia</item>
+        <item>260</item>
+        <item>ZM</item>
+    </string-array>
+    <string-array name="c232">
+        <item>津巴布韦</item>
+        <item>Zimbabwe</item>
+        <item>263</item>
+        <item>ZW</item>
+    </string-array>
+    <string-array name="c233">
+        <item>根西</item>
+        <item>Guernsey</item>
+        <item>44</item>
+        <item>GG</item>
+    </string-array>
+    <string-array name="c234">
+        <item>科索沃</item>
+        <item>Kosovo</item>
+        <item>381</item>
+        <item>XK</item>
+    </string-array>
+    <string-array name="c235">
+        <item>马恩</item>
+        <item>Isle Of Man</item>
+        <item>44</item>
+        <item>IM</item>
+    </string-array>
+    <string-array name="c236">
+        <item>马约特</item>
+        <item>Mayotte</item>
+        <item>262</item>
+        <item>YT</item>
+    </string-array>
+    <string-array name="c237">
+        <item>西撒哈拉</item>
+        <item>Western Sahara</item>
+        <item>212</item>
+        <item>EH</item>
+    </string-array>
+    <string-array name="c238">
+        <item>泽西</item>
+        <item>Jersey</item>
+        <item>44</item>
+        <item>JE</item>
+    </string-array>
+    <string-array name="china_latitude">
+        <item>22.5100642517</item>
+        <item>22.5104061956</item>
+        <item>22.5009305667</item>
+        <item>22.5017383993</item>
+        <item>22.5033515723</item>
+        <item>22.5055643889</item>
+        <item>22.5068529109</item>
+        <item>22.5069718507</item>
+        <item>22.5063920179</item>
+        <item>22.5061491811</item>
+        <item>22.5041618687</item>
+        <item>22.5022885157</item>
+        <item>22.5029278374</item>
+        <item>22.5048210055</item>
+        <item>22.5074030069</item>
+        <item>22.5120713019</item>
+        <item>22.5165461754</item>
+        <item>22.5182062522</item>
+        <item>22.5191973334</item>
+        <item>22.5223588347</item>
+        <item>22.5253517881</item>
+        <item>22.5299550617</item>
+        <item>22.5310798426</item>
+        <item>22.5325068642</item>
+        <item>22.5363022735</item>
+        <item>22.5371049446</item>
+        <item>22.5363320022</item>
+        <item>22.5340825168</item>
+        <item>22.535341044</item>
+        <item>22.533527572</item>
+        <item>22.5325861428</item>
+        <item>22.5313622752</item>
+        <item>22.5303167764</item>
+        <item>22.5296082112</item>
+        <item>22.5296131662</item>
+        <item>22.5309411036</item>
+        <item>22.5320163272</item>
+        <item>22.5340230585</item>
+        <item>22.5349694328</item>
+        <item>22.5378085167</item>
+        <item>22.5396268871</item>
+        <item>22.5398349824</item>
+        <item>22.5395723859</item>
+        <item>22.539671479</item>
+        <item>22.540062896</item>
+        <item>22.5417970089</item>
+        <item>22.5420447376</item>
+        <item>22.5419951919</item>
+        <item>22.541474961</item>
+        <item>22.5418812367</item>
+        <item>22.5423667841</item>
+        <item>22.5428572844</item>
+        <item>22.5434468733</item>
+        <item>22.543521191</item>
+        <item>22.5433230103</item>
+        <item>22.5429415115</item>
+        <item>22.5428374662</item>
+        <item>22.5427136027</item>
+        <item>22.5421586926</item>
+        <item>22.5420298739</item>
+        <item>22.5420447376</item>
+        <item>22.5421339198</item>
+        <item>22.5420893287</item>
+        <item>22.5416632353</item>
+        <item>22.5412371406</item>
+        <item>22.5411677762</item>
+        <item>22.5411975038</item>
+        <item>22.5415096432</item>
+        <item>22.541678099</item>
+        <item>22.5417325994</item>
+        <item>22.5416929628</item>
+        <item>22.5417226902</item>
+        <item>22.5418515093</item>
+        <item>22.5421141015</item>
+        <item>22.5422776021</item>
+        <item>22.5424212842</item>
+        <item>22.5427185572</item>
+        <item>22.5430455567</item>
+        <item>22.5433031922</item>
+        <item>22.5439968236</item>
+        <item>22.5442247304</item>
+        <item>22.5444675002</item>
+        <item>22.5455178462</item>
+        <item>22.5462263298</item>
+        <item>22.5463006461</item>
+        <item>22.5463105549</item>
+        <item>22.5462213754</item>
+        <item>22.5462312842</item>
+        <item>22.5463452358</item>
+        <item>22.5465384578</item>
+        <item>22.5467366339</item>
+        <item>22.5469793993</item>
+        <item>22.5473063888</item>
+        <item>22.5476383318</item>
+        <item>22.5481634937</item>
+        <item>22.5481882655</item>
+        <item>22.5481337676</item>
+        <item>22.5480594524</item>
+        <item>22.5477275104</item>
+        <item>22.5474451113</item>
+        <item>22.5472717081</item>
+        <item>22.5470586696</item>
+        <item>22.547038852</item>
+        <item>22.5470685783</item>
+        <item>22.5472023467</item>
+        <item>22.5473014344</item>
+        <item>22.5473906132</item>
+        <item>22.5483170784</item>
+        <item>22.5490255477</item>
+        <item>22.5492336289</item>
+        <item>22.5493376693</item>
+        <item>22.5495804301</item>
+        <item>22.5496894247</item>
+        <item>22.5504177039</item>
+        <item>22.5507149597</item>
+        <item>22.550799182</item>
+        <item>22.5508734958</item>
+        <item>22.5508734958</item>
+        <item>22.5507942278</item>
+        <item>22.550779365</item>
+        <item>22.5510964369</item>
+        <item>22.551200476</item>
+        <item>22.5513292862</item>
+        <item>22.551453142</item>
+        <item>22.5515869061</item>
+        <item>22.5516265399</item>
+        <item>22.5516909448</item>
+        <item>22.5517999377</item>
+        <item>22.5519337015</item>
+        <item>22.5522359082</item>
+        <item>22.5523894884</item>
+        <item>22.5525232516</item>
+        <item>22.5526619689</item>
+        <item>22.5528700446</item>
+        <item>22.5529740824</item>
+        <item>22.553107845</item>
+        <item>22.5532316993</item>
+        <item>22.5534397741</item>
+        <item>22.5538509687</item>
+        <item>22.5544355565</item>
+        <item>22.5548120694</item>
+        <item>22.5550201418</item>
+        <item>22.5550696828</item>
+        <item>22.5549953713</item>
+        <item>22.5549111515</item>
+        <item>22.5547922529</item>
+        <item>22.5547030789</item>
+        <item>22.554579226</item>
+        <item>22.5547228954</item>
+        <item>22.5547328036</item>
+        <item>22.5546733542</item>
+        <item>22.554376107</item>
+        <item>22.5543860153</item>
+        <item>22.5544652812</item>
+        <item>22.5546832624</item>
+        <item>22.5548665646</item>
+        <item>22.5550052795</item>
+        <item>22.5552975713</item>
+        <item>22.5553124336</item>
+        <item>22.5552430762</item>
+        <item>22.5550894992</item>
+        <item>22.554980509</item>
+        <item>22.5549309679</item>
+        <item>22.5549458303</item>
+        <item>22.5550894992</item>
+        <item>22.5553768367</item>
+        <item>22.5571305733</item>
+        <item>22.5582105469</item>
+        <item>22.5585622796</item>
+        <item>22.5591022618</item>
+        <item>22.5592409725</item>
+        <item>22.5604150538</item>
+        <item>22.5607469653</item>
+        <item>22.5615346326</item>
+        <item>22.5619309415</item>
+        <item>22.5616981102</item>
+        <item>22.5609352133</item>
+        <item>22.5603011139</item>
+        <item>22.5593499594</item>
+        <item>22.5591518013</item>
+        <item>22.5591567553</item>
+        <item>22.5594094067</item>
+        <item>22.5604150538</item>
+        <item>22.5611680459</item>
+        <item>22.5612423541</item>
+        <item>22.5609352133</item>
+        <item>22.5602466208</item>
+        <item>22.559637288</item>
+        <item>22.5596471959</item>
+        <item>22.5596670116</item>
+        <item>22.5596174722</item>
+        <item>22.5598205835</item>
+        <item>22.5599345239</item>
+        <item>22.5600236945</item>
+        <item>22.5599394778</item>
+        <item>22.5597660903</item>
+        <item>22.5594985777</item>
+        <item>22.559285558</item>
+        <item>22.5591418934</item>
+        <item>22.5590428143</item>
+        <item>22.5583839363</item>
+        <item>22.5582699947</item>
+        <item>22.5569571823</item>
+        <item>22.5563280187</item>
+        <item>22.556030775</item>
+        <item>22.5558276581</item>
+        <item>22.555624541</item>
+        <item>22.5553471122</item>
+        <item>22.5550350041</item>
+        <item>22.5545445472</item>
+        <item>22.5544355565</item>
+        <item>22.5541184922</item>
+        <item>22.5542720703</item>
+        <item>22.5544256483</item>
+        <item>22.5546089507</item>
+        <item>22.5549012433</item>
+        <item>22.5553074795</item>
+        <item>22.555446194</item>
+        <item>22.5554412399</item>
+        <item>22.5553322499</item>
+        <item>22.5552381222</item>
+        <item>22.5552728008</item>
+        <item>22.555228214</item>
+        <item>22.5552034435</item>
+        <item>22.5552331681</item>
+        <item>22.5551737189</item>
+        <item>22.5552381222</item>
+        <item>22.5551935353</item>
+        <item>22.5552381222</item>
+        <item>22.5552034435</item>
+        <item>22.5550696828</item>
+        <item>22.5550597746</item>
+        <item>22.5549309679</item>
+        <item>22.554797207</item>
+        <item>22.5547129871</item>
+        <item>22.5545940884</item>
+        <item>22.5545495013</item>
+        <item>22.5545891342</item>
+        <item>22.5545693178</item>
+        <item>22.5545940884</item>
+        <item>22.5546931707</item>
+        <item>22.5547922529</item>
+        <item>22.5550746369</item>
+        <item>22.5553619745</item>
+        <item>22.555565092</item>
+        <item>22.5556394032</item>
+        <item>22.5556344491</item>
+        <item>22.5555750002</item>
+        <item>22.5554709644</item>
+        <item>22.5551737189</item>
+        <item>22.5547823447</item>
+        <item>22.5542324373</item>
+        <item>22.5541977584</item>
+        <item>22.554296841</item>
+        <item>22.554296841</item>
+        <item>22.5543216116</item>
+        <item>22.5544008776</item>
+        <item>22.5546436295</item>
+        <item>22.5550250959</item>
+        <item>22.5550845451</item>
+        <item>22.555129132</item>
+        <item>22.5552034435</item>
+        <item>22.5553471122</item>
+        <item>22.5554759185</item>
+        <item>22.5555551838</item>
+        <item>22.5555551838</item>
+        <item>22.5556294951</item>
+        <item>22.5558127959</item>
+        <item>22.5559960965</item>
+        <item>22.5560357291</item>
+        <item>22.5559960965</item>
+        <item>22.5554016072</item>
+        <item>22.5553520663</item>
+        <item>22.555337204</item>
+        <item>22.5553867449</item>
+        <item>22.5558375663</item>
+        <item>22.5559960965</item>
+        <item>22.5562338916</item>
+        <item>22.5567144344</item>
+        <item>22.55691755</item>
+        <item>22.5569571823</item>
+        <item>22.5567540668</item>
+        <item>22.5565806752</item>
+        <item>22.5565806752</item>
+        <item>22.5566401238</item>
+        <item>22.5566549859</item>
+        <item>22.5567639748</item>
+        <item>22.5566549859</item>
+        <item>22.5568036072</item>
+        <item>22.55727424</item>
+        <item>22.5574773547</item>
+        <item>22.5572246998</item>
+        <item>22.5570463548</item>
+        <item>22.5566549859</item>
+        <item>22.556362697</item>
+        <item>22.5559713262</item>
+        <item>22.5560753616</item>
+        <item>22.5560060047</item>
+        <item>22.5561149941</item>
+        <item>22.5560159128</item>
+        <item>22.5561348104</item>
+        <item>22.5563181105</item>
+        <item>22.5562784781</item>
+        <item>22.5563924214</item>
+        <item>22.5565261807</item>
+        <item>22.5568828717</item>
+        <item>22.5564716862</item>
+        <item>22.5558326122</item>
+        <item>22.5563379268</item>
+        <item>22.5560852697</item>
+        <item>22.5558920611</item>
+        <item>22.5555948165</item>
+        <item>22.5555403216</item>
+        <item>22.5553074795</item>
+        <item>22.5550201418</item>
+        <item>22.5549359221</item>
+        <item>22.5548715187</item>
+        <item>22.5547328036</item>
+        <item>22.5547922529</item>
+        <item>22.5549606926</item>
+        <item>22.5552926172</item>
+        <item>22.5552232599</item>
+        <item>22.5550498664</item>
+        <item>22.5551687648</item>
+        <item>22.5553421581</item>
+        <item>22.5556047247</item>
+        <item>22.5557830715</item>
+        <item>22.5558524285</item>
+        <item>22.5559713262</item>
+        <item>22.5559416018</item>
+        <item>22.5553669286</item>
+        <item>22.5550250959</item>
+        <item>22.5546832624</item>
+        <item>22.5544603271</item>
+        <item>22.5538757394</item>
+        <item>22.5536676652</item>
+        <item>22.5536032613</item>
+        <item>22.5531672951</item>
+        <item>22.5530038074</item>
+        <item>22.5525480226</item>
+        <item>22.5519832436</item>
+        <item>22.5517206702</item>
+        <item>22.5516017688</item>
+        <item>22.5513788285</item>
+        <item>22.5511410251</item>
+        <item>22.5509478095</item>
+        <item>22.550977535</item>
+        <item>22.550918084</item>
+        <item>22.5508140448</item>
+        <item>22.5502096245</item>
+        <item>22.5498975048</item>
+        <item>22.5491394969</item>
+        <item>22.5484607543</item>
+        <item>22.548252672</item>
+        <item>22.548012386</item>
+        <item>22.5478563238</item>
+        <item>22.5470165573</item>
+        <item>22.5464988226</item>
+        <item>22.5461767856</item>
+        <item>22.5459959492</item>
+        <item>22.5459464049</item>
+        <item>22.5452775555</item>
+        <item>22.5441627992</item>
+        <item>22.5436673491</item>
+        <item>22.5436648719</item>
+        <item>22.5507273453</item>
+        <item>22.5557260996</item>
+        <item>22.5655026241</item>
+        <item>22.5683361262</item>
+        <item>22.5620002955</item>
+        <item>22.5449703791</item>
+        <item>22.4687100607</item>
+        <item>22.3652371135</item>
+        <item>22.4072197593</item>
+        <item>22.6938532207</item>
+        <item>22.5734382646</item>
+        <item>22.8749099094</item>
+        <item>24.9163314046</item>
+        <item>28.2608441148</item>
+        <item>30.9493469155</item>
+        <item>35.065973138</item>
+        <item>36.914764289</item>
+        <item>38.376115424</item>
+        <item>41.5085772974</item>
+        <item>42.1308213019</item>
+        <item>44.9025779963</item>
+        <item>45.1200528415</item>
+        <item>48.4292005556</item>
+        <item>47.6949743419</item>
+        <item>48.7489453434</item>
+        <item>49.6391771965</item>
+        <item>53.1467703309</item>
+        <item>53.5141845208</item>
+        <item>52.8293209103</item>
+        <item>52.0795060038</item>
+        <item>51.1517861014</item>
+        <item>50.0641917367</item>
+        <item>49.4681240673</item>
+        <item>49.6960618191</item>
+        <item>48.0193241848</item>
+        <item>47.9605023889</item>
+        <item>46.8301336404</item>
+        <item>46.3469276106</item>
+        <item>45.521743897</item>
+        <item>44.7779358963</item>
+        <item>45.0269504532</item>
+        <item>44.3395652481</item>
+        <item>43.6122167682</item>
+        <item>42.7470121732</item>
+        <item>42.455887642</item>
+        <item>41.6400783847</item>
+        <item>42.6501218137</item>
+        <item>42.7147321854</item>
+        <item>44.370986963</item>
+        <item>45.0890355648</item>
+        <item>47.2792290026</item>
+        <item>49.1242192486</item>
+        <item>46.9802523552</item>
+        <item>46.9802523552</item>
+        <item>45.3675843688</item>
+        <item>44.8402906514</item>
+        <item>43.8345267822</item>
+        <item>42.3585439175</item>
+        <item>40.8802948055</item>
+        <item>39.4022443403</item>
+        <item>35.9602229693</item>
+        <item>34.3434360685</item>
+        <item>31.466153715</item>
+        <item>27.6446063819</item>
+        <item>29.2672328652</item>
+        <item>27.4887811689</item>
+        <item>25.8394494021</item>
+        <item>24.4071379177</item>
+        <item>23.6847741669</item>
+        <item>22.3094258412</item>
+        <item>21.1972160774</item>
+        <item>22.4211847103</item>
+        <item>22.6342926938</item>
+        <item>23.3825982842</item>
+        <item>22.8116307077</item>
+        <item>22.0398216502</item>
+        <item>21.9252111595</item>
+        <item>21.6778482933</item>
+        <item>21.6625334924</item>
+        <item>21.5469820583</item>
+        <item>18.2502199771</item>
+        <item>18.0100799461</item>
+        <item>22.0659144195</item>
+        <item>22.1061454169</item>
+        <item>22.1087248599</item>
+        <item>22.1449637766</item>
+        <item>22.157173831</item>
+        <item>22.1822588756</item>
+        <item>22.1892229757</item>
+        <item>22.1969416961</item>
+        <item>22.2027726745</item>
+        <item>22.2062219767</item>
+        <item>22.2094352892</item>
+        <item>22.2124051787</item>
+        <item>22.2137907745</item>
+        <item>22.2137361456</item>
+        <item>22.2135821911</item>
+        <item>22.2137162805</item>
+        <item>22.2138255384</item>
+        <item>22.2138404372</item>
+        <item>22.213743595</item>
+        <item>22.2131575738</item>
+        <item>22.2131575738</item>
+        <item>22.2164328047</item>
+        <item>22.2172050428</item>
+        <item>22.2173540272</item>
+        <item>22.2171231014</item>
+        <item>22.2168648613</item>
+        <item>22.2167009779</item>
+        <item>22.2169865321</item>
+        <item>22.2170635075</item>
+        <item>22.2169070736</item>
+        <item>22.2150124714</item>
+        <item>22.2442977286</item>
+        <item>22.4408602122</item>
+        <item>22.4288038438</item>
+        <item>22.4723758589</item>
+        <item>22.5100642517</item>
+    </string-array>
+    <string-array name="china_longitude">
+        <item>113.995055258</item>
+        <item>113.998593092</item>
+        <item>114.012594223</item>
+        <item>114.018012285</item>
+        <item>114.02115047</item>
+        <item>114.023548365</item>
+        <item>114.026981592</item>
+        <item>114.029980302</item>
+        <item>114.034164548</item>
+        <item>114.036181569</item>
+        <item>114.044142365</item>
+        <item>114.050456285</item>
+        <item>114.054222107</item>
+        <item>114.056754112</item>
+        <item>114.057124257</item>
+        <item>114.058449268</item>
+        <item>114.06406045</item>
+        <item>114.072552323</item>
+        <item>114.074043632</item>
+        <item>114.075524211</item>
+        <item>114.076371789</item>
+        <item>114.078302979</item>
+        <item>114.080523849</item>
+        <item>114.085652232</item>
+        <item>114.088495374</item>
+        <item>114.09180522</item>
+        <item>114.093891978</item>
+        <item>114.096992612</item>
+        <item>114.10382688</item>
+        <item>114.107919931</item>
+        <item>114.108617306</item>
+        <item>114.109073281</item>
+        <item>114.109969139</item>
+        <item>114.111530185</item>
+        <item>114.112624526</item>
+        <item>114.115220904</item>
+        <item>114.115896821</item>
+        <item>114.116465449</item>
+        <item>114.120091796</item>
+        <item>114.122146368</item>
+        <item>114.125053883</item>
+        <item>114.125922918</item>
+        <item>114.127162099</item>
+        <item>114.128524661</item>
+        <item>114.129082561</item>
+        <item>114.130128622</item>
+        <item>114.130659699</item>
+        <item>114.13125515</item>
+        <item>114.13369596</item>
+        <item>114.134806395</item>
+        <item>114.135664701</item>
+        <item>114.136029482</item>
+        <item>114.137322307</item>
+        <item>114.138287902</item>
+        <item>114.139323235</item>
+        <item>114.140090346</item>
+        <item>114.141109586</item>
+        <item>114.141458273</item>
+        <item>114.141994715</item>
+        <item>114.143341184</item>
+        <item>114.143754244</item>
+        <item>114.144086838</item>
+        <item>114.144178033</item>
+        <item>114.14439261</item>
+        <item>114.144360423</item>
+        <item>114.144408703</item>
+        <item>114.145411849</item>
+        <item>114.147321582</item>
+        <item>114.147589803</item>
+        <item>114.147836566</item>
+        <item>114.148163795</item>
+        <item>114.148356915</item>
+        <item>114.148555398</item>
+        <item>114.148668051</item>
+        <item>114.148668051</item>
+        <item>114.148592949</item>
+        <item>114.148367643</item>
+        <item>114.148249626</item>
+        <item>114.148271084</item>
+        <item>114.148571491</item>
+        <item>114.148700237</item>
+        <item>114.148898721</item>
+        <item>114.149939418</item>
+        <item>114.150518775</item>
+        <item>114.150685072</item>
+        <item>114.150851369</item>
+        <item>114.151130319</item>
+        <item>114.151291251</item>
+        <item>114.151516557</item>
+        <item>114.151725769</item>
+        <item>114.151881337</item>
+        <item>114.151988626</item>
+        <item>114.152015448</item>
+        <item>114.151977897</item>
+        <item>114.151607752</item>
+        <item>114.151457548</item>
+        <item>114.151114225</item>
+        <item>114.151055217</item>
+        <item>114.151065946</item>
+        <item>114.151006937</item>
+        <item>114.150722623</item>
+        <item>114.150432944</item>
+        <item>114.150288105</item>
+        <item>114.150078893</item>
+        <item>114.149816036</item>
+        <item>114.149681926</item>
+        <item>114.149633646</item>
+        <item>114.149547815</item>
+        <item>114.149558544</item>
+        <item>114.149703383</item>
+        <item>114.149724841</item>
+        <item>114.149633646</item>
+        <item>114.149628282</item>
+        <item>114.149853587</item>
+        <item>114.150052071</item>
+        <item>114.150180817</item>
+        <item>114.150390029</item>
+        <item>114.150513411</item>
+        <item>114.15079236</item>
+        <item>114.151012301</item>
+        <item>114.151259065</item>
+        <item>114.151414633</item>
+        <item>114.151414633</item>
+        <item>114.151489735</item>
+        <item>114.15166676</item>
+        <item>114.151806235</item>
+        <item>114.151865244</item>
+        <item>114.151865244</item>
+        <item>114.151784778</item>
+        <item>114.151656032</item>
+        <item>114.151639938</item>
+        <item>114.151677489</item>
+        <item>114.151784778</item>
+        <item>114.151886702</item>
+        <item>114.151881337</item>
+        <item>114.151741862</item>
+        <item>114.151704311</item>
+        <item>114.151747227</item>
+        <item>114.151731133</item>
+        <item>114.151913524</item>
+        <item>114.151951075</item>
+        <item>114.152154922</item>
+        <item>114.152525067</item>
+        <item>114.152766466</item>
+        <item>114.152798653</item>
+        <item>114.152691364</item>
+        <item>114.152691364</item>
+        <item>114.152895212</item>
+        <item>114.153340459</item>
+        <item>114.153614044</item>
+        <item>114.15392518</item>
+        <item>114.154595733</item>
+        <item>114.154826403</item>
+        <item>114.154949784</item>
+        <item>114.155014157</item>
+        <item>114.155030251</item>
+        <item>114.155116081</item>
+        <item>114.15563643</item>
+        <item>114.155765176</item>
+        <item>114.155947566</item>
+        <item>114.156135321</item>
+        <item>114.156178236</item>
+        <item>114.156333804</item>
+        <item>114.15651083</item>
+        <item>114.156709313</item>
+        <item>114.156945348</item>
+        <item>114.157277942</item>
+        <item>114.158007503</item>
+        <item>114.158302546</item>
+        <item>114.158420563</item>
+        <item>114.158763885</item>
+        <item>114.159498811</item>
+        <item>114.159965515</item>
+        <item>114.160373211</item>
+        <item>114.161285162</item>
+        <item>114.16203618</item>
+        <item>114.162443876</item>
+        <item>114.162889123</item>
+        <item>114.163243175</item>
+        <item>114.164117575</item>
+        <item>114.164911509</item>
+        <item>114.16554451</item>
+        <item>114.166424274</item>
+        <item>114.167298675</item>
+        <item>114.16839838</item>
+        <item>114.169347882</item>
+        <item>114.16987896</item>
+        <item>114.170613885</item>
+        <item>114.172496796</item>
+        <item>114.172711372</item>
+        <item>114.173419476</item>
+        <item>114.174288511</item>
+        <item>114.17462647</item>
+        <item>114.17503953</item>
+        <item>114.176445007</item>
+        <item>114.177094102</item>
+        <item>114.177179933</item>
+        <item>114.177163839</item>
+        <item>114.177276492</item>
+        <item>114.177474976</item>
+        <item>114.177619815</item>
+        <item>114.177587628</item>
+        <item>114.177668095</item>
+        <item>114.17784512</item>
+        <item>114.177737832</item>
+        <item>114.17775929</item>
+        <item>114.177705646</item>
+        <item>114.17830646</item>
+        <item>114.179347157</item>
+        <item>114.180318117</item>
+        <item>114.180425406</item>
+        <item>114.18102622</item>
+        <item>114.18117106</item>
+        <item>114.181192517</item>
+        <item>114.181112051</item>
+        <item>114.181133509</item>
+        <item>114.181471467</item>
+        <item>114.181739688</item>
+        <item>114.18199718</item>
+        <item>114.182581902</item>
+        <item>114.182710648</item>
+        <item>114.182769656</item>
+        <item>114.182834029</item>
+        <item>114.183161259</item>
+        <item>114.183279276</item>
+        <item>114.183601141</item>
+        <item>114.183703065</item>
+        <item>114.183799624</item>
+        <item>114.18384254</item>
+        <item>114.184336066</item>
+        <item>114.184652567</item>
+        <item>114.184893966</item>
+        <item>114.185403585</item>
+        <item>114.185623527</item>
+        <item>114.1860044</item>
+        <item>114.186326265</item>
+        <item>114.186685681</item>
+        <item>114.186766148</item>
+        <item>114.186889529</item>
+        <item>114.186980724</item>
+        <item>114.187120199</item>
+        <item>114.187168479</item>
+        <item>114.187114835</item>
+        <item>114.187238216</item>
+        <item>114.187383056</item>
+        <item>114.187554717</item>
+        <item>114.187769294</item>
+        <item>114.188064337</item>
+        <item>114.188225269</item>
+        <item>114.188402295</item>
+        <item>114.188579321</item>
+        <item>114.189062119</item>
+        <item>114.189228415</item>
+        <item>114.189807773</item>
+        <item>114.190462232</item>
+        <item>114.190585613</item>
+        <item>114.190633893</item>
+        <item>114.190692902</item>
+        <item>114.190869927</item>
+        <item>114.190928936</item>
+        <item>114.191052318</item>
+        <item>114.191116691</item>
+        <item>114.191127419</item>
+        <item>114.19116497</item>
+        <item>114.191266894</item>
+        <item>114.191465378</item>
+        <item>114.191583395</item>
+        <item>114.191765785</item>
+        <item>114.192082286</item>
+        <item>114.192216396</item>
+        <item>114.192334414</item>
+        <item>114.193418026</item>
+        <item>114.193814993</item>
+        <item>114.194549918</item>
+        <item>114.194785953</item>
+        <item>114.195799828</item>
+        <item>114.195950031</item>
+        <item>114.196030498</item>
+        <item>114.195976853</item>
+        <item>114.196159244</item>
+        <item>114.196352363</item>
+        <item>114.197189212</item>
+        <item>114.197639823</item>
+        <item>114.198004603</item>
+        <item>114.198224545</item>
+        <item>114.198412299</item>
+        <item>114.198675156</item>
+        <item>114.199082851</item>
+        <item>114.199549556</item>
+        <item>114.200166464</item>
+        <item>114.200643897</item>
+        <item>114.201019406</item>
+        <item>114.201153517</item>
+        <item>114.201153517</item>
+        <item>114.201201797</item>
+        <item>114.201555848</item>
+        <item>114.201931357</item>
+        <item>114.202478528</item>
+        <item>114.202703834</item>
+        <item>114.202896953</item>
+        <item>114.203653336</item>
+        <item>114.204517007</item>
+        <item>114.205069542</item>
+        <item>114.205514789</item>
+        <item>114.206727147</item>
+        <item>114.208717346</item>
+        <item>114.209108949</item>
+        <item>114.210600257</item>
+        <item>114.211329818</item>
+        <item>114.211560488</item>
+        <item>114.211887717</item>
+        <item>114.21204865</item>
+        <item>114.212316871</item>
+        <item>114.212590456</item>
+        <item>114.212654829</item>
+        <item>114.212778211</item>
+        <item>114.213035703</item>
+        <item>114.213298559</item>
+        <item>114.214221239</item>
+        <item>114.21522975</item>
+        <item>114.215819836</item>
+        <item>114.216061234</item>
+        <item>114.216377735</item>
+        <item>114.216640592</item>
+        <item>114.216849804</item>
+        <item>114.216973186</item>
+        <item>114.217005372</item>
+        <item>114.217134118</item>
+        <item>114.217783213</item>
+        <item>114.217981696</item>
+        <item>114.218657613</item>
+        <item>114.2190063</item>
+        <item>114.219210148</item>
+        <item>114.219413996</item>
+        <item>114.219676852</item>
+        <item>114.219875336</item>
+        <item>114.220470786</item>
+        <item>114.220781922</item>
+        <item>114.220846295</item>
+        <item>114.220819473</item>
+        <item>114.221146703</item>
+        <item>114.221409559</item>
+        <item>114.221892357</item>
+        <item>114.222541451</item>
+        <item>114.222916961</item>
+        <item>114.223303199</item>
+        <item>114.22403276</item>
+        <item>114.224209785</item>
+        <item>114.224317074</item>
+        <item>114.224585295</item>
+        <item>114.224998355</item>
+        <item>114.225674272</item>
+        <item>114.22614634</item>
+        <item>114.226387739</item>
+        <item>114.226908088</item>
+        <item>114.226916134</item>
+        <item>114.226615727</item>
+        <item>114.226202667</item>
+        <item>114.225921035</item>
+        <item>114.225816429</item>
+        <item>114.225671589</item>
+        <item>114.225465059</item>
+        <item>114.226175845</item>
+        <item>114.226342142</item>
+        <item>114.23363775</item>
+        <item>114.237060249</item>
+        <item>114.248674214</item>
+        <item>114.276032746</item>
+        <item>114.332970679</item>
+        <item>114.433971941</item>
+        <item>114.455134571</item>
+        <item>114.454893172</item>
+        <item>114.502429962</item>
+        <item>114.830474854</item>
+        <item>115.129852295</item>
+        <item>115.640716553</item>
+        <item>116.574554443</item>
+        <item>119.690551758</item>
+        <item>122.228393555</item>
+        <item>123.530273437</item>
+        <item>121.069335937</item>
+        <item>123.310546875</item>
+        <item>122.387695312</item>
+        <item>126.826171875</item>
+        <item>130.737304688</item>
+        <item>131.220703125</item>
+        <item>133.06640625</item>
+        <item>134.604492188</item>
+        <item>131.044921875</item>
+        <item>130.825195312</item>
+        <item>127.749023438</item>
+        <item>125.375976562</item>
+        <item>122.299804687</item>
+        <item>120.498046875</item>
+        <item>120.805664063</item>
+        <item>119.750976562</item>
+        <item>119.35546875</item>
+        <item>117.993164062</item>
+        <item>116.89453125</item>
+        <item>115.708007812</item>
+        <item>118.564453125</item>
+        <item>120.014648438</item>
+        <item>116.938476563</item>
+        <item>115.883789062</item>
+        <item>113.598632812</item>
+        <item>111.840820312</item>
+        <item>111.313476562</item>
+        <item>111.884765625</item>
+        <item>110.21484375</item>
+        <item>107.314453125</item>
+        <item>105.205078125</item>
+        <item>100.942382812</item>
+        <item>96.4599609375</item>
+        <item>94.5703125</item>
+        <item>91.0546875</item>
+        <item>90.7470703125</item>
+        <item>87.2314453125</item>
+        <item>85.4296875</item>
+        <item>83.1005859375</item>
+        <item>82.529296875</item>
+        <item>79.98046875</item>
+        <item>80.6396484375</item>
+        <item>80.2880859375</item>
+        <item>76.7724609375</item>
+        <item>73.6962890625</item>
+        <item>76.4208984375</item>
+        <item>79.1015625</item>
+        <item>78.92578125</item>
+        <item>87.802734375</item>
+        <item>96.0205078125</item>
+        <item>98.6572265625</item>
+        <item>98.6572265625</item>
+        <item>97.646484375</item>
+        <item>98.9208984375</item>
+        <item>99.4482421875</item>
+        <item>101.77734375</item>
+        <item>101.656494141</item>
+        <item>103.952636719</item>
+        <item>105.29296875</item>
+        <item>106.836547852</item>
+        <item>106.72668457</item>
+        <item>107.067260742</item>
+        <item>107.396850586</item>
+        <item>107.869262695</item>
+        <item>108.034572601</item>
+        <item>108.489990234</item>
+        <item>110.225830078</item>
+        <item>113.577003479</item>
+        <item>113.556444347</item>
+        <item>113.548424542</item>
+        <item>113.549618125</item>
+        <item>113.539211154</item>
+        <item>113.526910543</item>
+        <item>113.52878809</item>
+        <item>113.533586562</item>
+        <item>113.535161018</item>
+        <item>113.535085917</item>
+        <item>113.534031808</item>
+        <item>113.533154726</item>
+        <item>113.534900844</item>
+        <item>113.535252213</item>
+        <item>113.53546679</item>
+        <item>113.535748422</item>
+        <item>113.53682667</item>
+        <item>113.537904918</item>
+        <item>113.538637161</item>
+        <item>113.540976048</item>
+        <item>113.541284502</item>
+        <item>113.542917967</item>
+        <item>113.544020355</item>
+        <item>113.544546068</item>
+        <item>113.547158539</item>
+        <item>113.547914922</item>
+        <item>113.548059762</item>
+        <item>113.550685644</item>
+        <item>113.55088681</item>
+        <item>113.552091122</item>
+        <item>113.559856117</item>
+        <item>113.641891479</item>
+        <item>113.686523438</item>
+        <item>113.869109452</item>
+        <item>113.947834969</item>
+        <item>113.995055258</item>
+    </string-array>
+    <string-array name="repeat_time">
+        <item>@string/monday</item>
+        <item>@string/tuesday</item>
+        <item>@string/wednesday</item>
+        <item>@string/thursday</item>
+        <item>@string/friday</item>
+        <item>@string/saturday</item>
+        <item>@string/sunday</item>
+    </string-array>
+    <string-array name="repeat_time_simple">
+        <item>@string/mon</item>
+        <item>@string/tue</item>
+        <item>@string/wed</item>
+        <item>@string/thu</item>
+        <item>@string/fri</item>
+        <item>@string/sat</item>
+        <item>@string/sun</item>
+    </string-array>
+    <string-array name="sound">
+        <item>@string/alert_sound_def</item>
+        <item>@string/alert_sound_sweet</item>
+        <item>@string/alert_sound_clever</item>
+        <item>@string/alert_sound_magical</item>
+        <item>@string/alert_sound_alarm</item>
+        <item>@string/alert_sound_trumpet</item>
+        <item>@string/alert_sound_mystery</item>
+        <item>@string/alert_sound_careful</item>
+        <item>@string/alert_sound_dangerous</item>
+        <item>@string/alert_sound_long_call</item>
+    </string-array>
+</resources>

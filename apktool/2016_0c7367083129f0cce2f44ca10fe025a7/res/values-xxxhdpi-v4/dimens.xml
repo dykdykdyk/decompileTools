@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_call_height">96.0dip</dimen>
+    <dimen name="btn_call_width">96.0dip</dimen>
+    <dimen name="image_height">144.0dip</dimen>
+    <dimen name="image_width">144.0dip</dimen>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/actionbar_default_with_border" />
+    <include layout="@layout/include_bind_old_phone" />
+    <include layout="@layout/include_bind_phone_number" />
+    <include layout="@layout/include_bind_receive_captcha" />
+</LinearLayout>

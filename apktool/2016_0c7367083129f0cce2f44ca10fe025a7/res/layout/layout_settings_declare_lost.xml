@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/tv_search_region" android:text="@string/settings_find_region" android:drawableStart="@drawable/ic_bar_search_location" style="@style/SettingsItemText" />
+    <View android:background="@color/c3" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="64.0dip" />
+    <TextView android:id="@id/tv_undo_declare_lost" android:text="@string/settings_undo_declare_lost" android:drawableStart="@drawable/ic_bar_lose" style="@style/SettingsItemText" />
+    <include layout="@layout/item_page_stub_border_divider_20" />
+    <TextView android:id="@id/tv_qa" android:text="@string/more_list_features" android:drawableStart="@drawable/ic_bar_question" style="@style/SettingsItemText" />
+    <include layout="@layout/item_page_stub_border_divider_20" />
+    <TextView android:textSize="@dimen/t1" android:textColor="@color/c1" android:gravity="center" android:id="@id/tv_delete" android:background="@drawable/bg_more_item_selector" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_height" android:text="@string/settings_delete_nut" />
+    <View android:background="@drawable/bg_list_border_top_pressed" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="20.0dip" />
+</LinearLayout>

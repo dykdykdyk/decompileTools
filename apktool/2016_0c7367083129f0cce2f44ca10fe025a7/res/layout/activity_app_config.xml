@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/c4" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/actionbar_default_with_border" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_delay_alarm" android:background="@drawable/bg_more_item_selector" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_height" android:layout_marginTop="24.0dip">
+        <TextView android:layout_gravity="center_vertical" android:text="@string/app_config_delay_alarm" android:layout_weight="1.0" style="@style/ListTextBlackStyle" />
+        <TextView android:textSize="@dimen/t1" android:textColor="@color/c6" android:layout_gravity="center_vertical" android:id="@id/tv_delay_alarm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/edge_margin" android:drawableEnd="@drawable/ic_list_more" android:layout_marginEnd="@dimen/edge_margin_medium" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/t3" android:textColor="@color/c3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/app_config_delay_alarm_tips" android:paddingStart="@dimen/edge_margin_medium" android:paddingEnd="@dimen/edge_margin_medium" />
+</LinearLayout>

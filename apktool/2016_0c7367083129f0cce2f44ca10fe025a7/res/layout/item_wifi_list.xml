@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:padding="@dimen/edge_margin" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_wifi_icon" android:background="@drawable/wifiicon" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_centerVertical="true" android:layout_marginStart="@dimen/edge_margin" android:layout_alignParentStart="true" />
+    <TextView android:textSize="@dimen/t1" android:textColor="@color/c1" android:id="@id/tv_wifi" android:padding="@dimen/edge_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toEndOf="@id/iv_wifi_icon" />
+    <ImageView android:id="@id/iv_checked" android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/edge_margin" android:layout_alignParentEnd="true" />
+</RelativeLayout>

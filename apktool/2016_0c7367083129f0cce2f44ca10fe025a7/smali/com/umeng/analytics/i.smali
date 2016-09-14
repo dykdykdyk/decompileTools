@@ -1,0 +1,103 @@
+.class public final Lcom/umeng/analytics/i;
+.super Lcom/umeng/analytics/n;
+.source "ReportPolicy.java"
+
+
+# instance fields
+.field private a:J
+
+.field private b:J
+
+
+# direct methods
+.method public constructor <init>(I)V
+    .locals 2
+
+    .prologue
+    .line 201
+    invoke-direct {p0}, Lcom/umeng/analytics/n;-><init>()V
+
+    .line 199
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcom/umeng/analytics/i;->b:J
+
+    .line 202
+    int-to-long v0, p1
+
+    iput-wide v0, p0, Lcom/umeng/analytics/i;->a:J
+
+    .line 203
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/umeng/analytics/i;->b:J
+
+    .line 204
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Z
+    .locals 4
+
+    .prologue
+    .line 215
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lcom/umeng/analytics/i;->b:J
+
+    sub-long/2addr v0, v2
+
+    iget-wide v2, p0, Lcom/umeng/analytics/i;->a:J
+
+    cmp-long v0, v0, v2
+
+    if-gez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final a(Z)Z
+    .locals 4
+
+    .prologue
+    .line 207
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lcom/umeng/analytics/i;->b:J
+
+    sub-long/2addr v0, v2
+
+    iget-wide v2, p0, Lcom/umeng/analytics/i;->a:J
+
+    cmp-long v0, v0, v2
+
+    if-ltz v0, :cond_0
+
+    .line 208
+    const/4 v0, 0x1
+
+    .line 211
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method

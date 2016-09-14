@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/actionbar_default_with_border" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/ll_home_tab" android:background="@drawable/bg_home_tab" android:paddingTop="1.0dip" android:layout_width="fill_parent" android:layout_height="56.0dip" android:layout_alignParentBottom="true">
+        <Button android:textSize="@dimen/t4" android:textColor="@color/home_tab_text_selector" android:gravity="center" android:id="@id/btn_tab_lost" android:background="@drawable/bg_tab_selector" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/home_tab_lost" android:drawableTop="@drawable/ic_tab_lost_selector" android:layout_weight="1.0" />
+        <Button android:textSize="@dimen/t4" android:textColor="@color/home_tab_text_selector" android:id="@id/btn_tab_location" android:background="@drawable/bg_tab_selector" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/home_tab_location" android:drawableTop="@drawable/ic_tab_location_selector" android:layout_weight="1.0" />
+        <Button android:textSize="@dimen/t4" android:textColor="@color/home_tab_text_selector" android:id="@id/btn_tab_more" android:background="@drawable/bg_tab_selector" android:paddingTop="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/home_tab_more" android:drawableTop="@drawable/ic_tab_more_selector" android:layout_weight="1.0" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/ll_home_tab" android:layout_below="@id/toolbar">
+        <FrameLayout android:id="@id/fl_more_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/fl_location_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <FrameLayout android:id="@id/fl_nut_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <android.support.v7.widget.RecyclerView android:id="@id/recycler_view_friends" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/ll_home_tab" />
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_location_info" android:tag="friends_location" android:background="@drawable/bg_list_border_top" android:layout_width="fill_parent" android:layout_height="144.0dip" android:layout_alignParentBottom="true" android:translationY="144.0dip">
+        <RelativeLayout android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_refresh_friend_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_location_refresh" android:layout_centerVertical="true" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" android:layout_alignParentEnd="true" />
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="8.0dip" android:layout_toStartOf="@id/iv_refresh_friend_location">
+                <TextView android:textSize="@dimen/t1" android:textColor="@color/c1" android:id="@id/tv_friend_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="8.0dip" />
+                <TextView android:textSize="@dimen/t3" android:textColor="@color/c2" android:id="@id/tv_location_failed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBaseline="@id/tv_friend_name" android:layout_toEndOf="@id/tv_friend_name" />
+                <TextView android:textSize="@dimen/t3" android:textColor="@color/c2" android:id="@id/tv_friend_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_below="@id/tv_friend_name" />
+                <TextView android:textSize="@dimen/t4" android:textColor="@color/c2" android:id="@id/tv_friend_location_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_friend_address" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <View android:background="@color/c3" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="48.0dip" android:divider="@drawable/divider_horizontal" android:showDividers="middle">
+            <TextView android:textSize="@dimen/t3" android:textColor="@color/c1" android:gravity="center" android:id="@id/tv_location_record" android:background="@drawable/bg_more_item_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/home_location_record" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/t3" android:textColor="@color/c1" android:gravity="center" android:id="@id/tv_safe_region" android:background="@drawable/bg_more_item_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/home_safe_region" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/t3" android:textColor="@color/c1" android:gravity="center" android:id="@id/tv_navigation" android:background="@drawable/bg_more_item_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/home_navigation" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

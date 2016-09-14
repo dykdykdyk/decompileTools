@@ -1,0 +1,33 @@
+.class interface abstract Lcom/twitter/sdk/android/core/identity/ShareEmailClient$EmailService;
+.super Ljava/lang/Object;
+.source "ShareEmailClient.java"
+
+
+# virtual methods
+.method public abstract verifyCredentials(Ljava/lang/Boolean;Ljava/lang/Boolean;Lcom/twitter/sdk/android/core/f;)V
+    .param p1    # Ljava/lang/Boolean;
+        .annotation runtime Lretrofit/http/Query;
+            value = "include_entities"
+        .end annotation
+    .end param
+    .param p2    # Ljava/lang/Boolean;
+        .annotation runtime Lretrofit/http/Query;
+            value = "skip_status"
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Boolean;",
+            "Ljava/lang/Boolean;",
+            "Lcom/twitter/sdk/android/core/f",
+            "<",
+            "Lcom/twitter/sdk/android/core/a/f;",
+            ">;)V"
+        }
+    .end annotation
+
+    .annotation runtime Lretrofit/http/GET;
+        value = "/1.1/account/verify_credentials.json?include_email=true"
+    .end annotation
+.end method

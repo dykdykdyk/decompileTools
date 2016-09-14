@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_call_height">48.0dip</dimen>
+    <dimen name="btn_call_width">48.0dip</dimen>
+    <dimen name="image_height">72.0dip</dimen>
+    <dimen name="image_width">72.0dip</dimen>
+    <dimen name="tw__login_btn_drawable_padding">5.0dip</dimen>
+    <dimen name="tw__login_btn_height">40.0dip</dimen>
+    <dimen name="tw__login_btn_left_padding">10.0dip</dimen>
+    <dimen name="tw__login_btn_right_padding">15.0dip</dimen>
+    <dimen name="tw__login_btn_text_size">16.0sp</dimen>
+    <dimen name="com_facebook_picker_divider_width">1.0px</dimen>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/primary_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/actionbar_default" />
+    <SearchView android:id="@id/sv_region_search" android:background="@color/c5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/toolbar" android:iconifiedByDefault="false" android:queryHint="@string/declare_hint_input_search_info" style="@style/AppTheme.SearchView" />
+    <RelativeLayout android:id="@id/rl_region_hint" android:background="@color/c5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/sv_region_search">
+        <ProgressBar android:id="@id/pb_region_address_loading" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/t4" android:textColor="@color/c1" android:id="@id/tv_region_address" android:paddingTop="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/t4" android:textColor="@color/c1" android:id="@id/tv_region_radius" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/tv_region_address" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_region_bottom" android:background="@color/c5" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/t4" android:textColor="@color/c1" android:id="@id/tv_region_text_start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="10.0dip" android:layout_alignParentStart="true" />
+        <TextView android:textSize="@dimen/t4" android:textColor="@color/c1" android:id="@id/tv_region_text_end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="10.0dip" android:layout_alignParentEnd="true" />
+        <SeekBar android:id="@id/sb_region_radius" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_toStartOf="@id/tv_region_text_end" android:layout_toEndOf="@id/tv_region_text_start" />
+    </RelativeLayout>
+    <FrameLayout android:id="@id/content" android:background="@color/c5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/rl_region_bottom" android:layout_below="@id/rl_region_hint" />
+</RelativeLayout>

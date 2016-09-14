@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/c5" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include layout="@layout/item_page_stub_border_divider_16" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_more_user_info" android:layout_width="fill_parent" android:layout_height="80.0dip" style="@style/CellInPageStyle">
+            <com.nut.blehunter.ui.widget.CircleImageView android:layout_gravity="center_vertical" android:id="@id/riv_more_icon" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/img_default_pic" />
+            <TextView android:textSize="@dimen/t1" android:textColor="@color/c15" android:layout_gravity="center" android:id="@id/tv_more_name" android:padding="12.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/more_user_default_name" />
+            <ImageView android:layout_gravity="end|center" android:id="@id/iv_more_user_red_point" android:layout_width="8.0dip" android:layout_height="8.0dip" android:src="@drawable/shape_red_point" android:layout_marginEnd="30.0dip" />
+            <View android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_list_more" />
+        </LinearLayout>
+        <View android:background="@color/c3" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="16.0dip" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/tv_more_friend" android:text="@string/friend_list_title" android:drawableStart="@drawable/more_buddy_list" style="@style/CellInPageStyle" />
+            <ImageView android:layout_gravity="end|center" android:id="@id/iv_more_friend_red_point" android:layout_width="8.0dip" android:layout_height="8.0dip" android:src="@drawable/shape_red_point" android:layout_marginEnd="30.0dip" />
+        </FrameLayout>
+        <include layout="@layout/item_page_stub_border_divider_16" />
+        <TextView android:id="@id/tv_more_disturb" android:text="@string/not_disturb_setting_title" android:drawableStart="@drawable/more_disturb" style="@style/CellInPageStyle" />
+        <include layout="@layout/item_page_stub_border_divider_16" />
+        <TextView android:id="@id/tv_more_nut_story" android:text="@string/more_fragment_nut_story" android:drawableStart="@drawable/more_nut_story" style="@style/CellInPageStyle" />
+        <View android:background="@color/c3" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="16.0dip" />
+        <TextView android:id="@id/tv_more_buy" android:text="@string/more_list_buy_nut" android:drawableStart="@drawable/more_shopping" style="@style/CellInPageStyle" />
+        <View android:id="@id/include_more_buy" android:background="@color/c3" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="16.0dip" />
+        <TextView android:id="@id/tv_more_feedback" android:text="@string/about_list_feedback" android:drawableStart="@drawable/more_opinion" style="@style/CellInPageStyle" />
+        <View android:background="@color/c3" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="16.0dip" />
+        <TextView android:id="@id/tv_more_about" android:text="@string/more_list_about" android:drawableStart="@drawable/more_about_us" style="@style/CellInPageStyle" />
+        <View android:background="@color/c3" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginStart="16.0dip" />
+        <TextView android:id="@id/tv_more_share_nut" android:text="@string/more_fragment_share_nut" android:drawableStart="@drawable/more_share" style="@style/CellInPageStyle" />
+        <View android:background="@color/c3" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <View android:background="@color/c4" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <RelativeLayout android:id="@id/rl_find_device_switch" android:background="@drawable/bg_more_item_selector" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_height">
+            <TextView android:text="发现Nut设备开关" android:drawableStart="@drawable/ic_list_about" style="@style/CellInPageStyle" />
+            <CheckBox android:id="@id/cb_find_device_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/ic_switch_selector" android:layout_centerVertical="true" android:layout_marginEnd="12.0dip" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+        <TextView android:id="@id/tv_more_log_info" android:visibility="gone" android:text="日志信息" android:drawableStart="@drawable/ic_list_about" style="@style/CellInPageStyle" />
+        <TextView android:id="@id/tv_more_app_config" android:visibility="gone" android:text="@string/more_list_app_config" android:drawableStart="@drawable/ic_list_about" style="@style/CellInPageStyle" />
+    </LinearLayout>
+</ScrollView>

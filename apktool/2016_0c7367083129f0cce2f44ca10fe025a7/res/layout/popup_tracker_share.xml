@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/rl_popup_share_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rl_popup_share" android:background="@drawable/shape_white_share" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/edge_margin" android:layout_marginRight="@dimen/edge_margin" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/t4" android:textColor="@color/c2" android:id="@id/tv_share_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/share_pop_text" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_marginBottom="30.0dip" android:layout_below="@id/tv_share_title">
+            <ImageView android:id="@id/iv_share_wx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_share_wx" android:layout_weight="1.0" />
+            <ImageView android:id="@id/iv_share_wx_friends" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_share_wx_f" android:layout_weight="1.0" />
+            <ImageView android:id="@id/iv_share_empty1" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <ImageView android:id="@id/iv_share_empty2" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <ImageView android:id="@id/iv_share_empty3" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <ImageView android:id="@id/iv_share_empty4" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/actionbar_default_with_border" />
+    <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="96.0dip" android:src="@drawable/location_seek_failed_reason" />
+    <TextView android:textSize="@dimen/t5" android:textColor="@color/c17" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/edge_margin" android:layout_marginTop="@dimen/edge_margin_large" android:text="@string/location_friend_failed_title" />
+    <TextView android:textSize="@dimen/t4" android:textColor="@color/c17" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/edge_margin" android:layout_marginTop="@dimen/edge_margin_medium" android:text="@string/location_friend_failed_tips" />
+</LinearLayout>

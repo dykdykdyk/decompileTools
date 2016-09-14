@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_dialog" android:padding="@dimen/edge_margin_medium" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/t1" android:textColor="@color/c1" android:gravity="center" android:id="@id/tv_title" android:padding="@dimen/edge_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/edge_margin" />
+    <FrameLayout android:id="@id/fl_dialog_content" android:padding="@dimen/edge_margin_medium" android:layout_width="fill_parent" android:layout_height="0.0dip" android:minWidth="72.0dip" android:minHeight="72.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="@dimen/t3" android:textColor="@color/c1" android:layout_gravity="center_horizontal" android:id="@id/tv_message" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/stub_divider_horizontal" android:showDividers="middle">
+        <Button android:textSize="@dimen/t1" android:textColor="@color/c6" android:gravity="center" android:id="@id/btn_negative" android:background="@drawable/bg_btn_white_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="144.0dip" style="@style/MyButtonStyle" />
+        <Button android:textSize="@dimen/t1" android:textColor="@color/c5" android:gravity="center" android:id="@id/btn_positive" android:background="@drawable/bg_btn_green_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="144.0dip" style="@style/MyButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

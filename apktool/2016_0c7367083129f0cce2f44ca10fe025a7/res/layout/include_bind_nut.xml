@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.nut.blehunter.ui.widget.LoopViewPager android:id="@id/vp_banner" android:layout_width="fill_parent" android:layout_height="260.0dip" />
+    <com.nut.blehunter.ui.widget.CirclePageIndicator android:id="@id/indicator" android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="16.0dip" android:layout_alignBottom="@id/vp_banner" app:centered="true" app:strokeWidth="1.0dip" app:fillColor="@color/c5" app:radius="4.0dip" app:strokeColor="@color/c5" />
+    <Button android:textSize="@dimen/t5" android:textColor="@color/c5" android:layout_gravity="center_horizontal" android:id="@id/btn_add_nut" android:background="@drawable/bg_btn_green_selector" android:layout_width="120.0dip" android:layout_height="44.0dip" android:layout_marginTop="100.0dip" android:text="@string/more_list_buy_nut" android:layout_below="@id/vp_banner" android:layout_centerHorizontal="true" />
+</RelativeLayout>

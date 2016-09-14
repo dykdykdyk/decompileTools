@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/actionbar_default" />
+    <RelativeLayout android:orientation="vertical" android:id="@id/rl_bind_scan_device" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@id/ll_bind_searching" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_alignParentTop="true">
+            <include layout="@layout/include_bind_searching" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_operation_guide_nut" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" android:layout_below="@id/ll_bind_searching">
+            <TextView android:textSize="@dimen/t2" android:textColor="@color/c2" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bind_phone_near_device" />
+            <Button android:textSize="@dimen/t4" android:textColor="@color/c5" android:layout_gravity="center" android:id="@id/bt_operation_guide_nut_help" android:background="@drawable/bg_btn_green_selector" android:paddingLeft="14.0dip" android:paddingTop="8.0dip" android:paddingRight="14.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginTop="20.0dip" android:text="@string/bind_btn_no_tracker_help" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_scan_result" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_below="@id/ll_bind_searching">
+            <TextView android:textSize="@dimen/t4" android:textColor="@color/c2" android:layout_gravity="center_vertical" android:background="@drawable/bg_list_selector" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bind_choose_scanned_result" />
+            <android.support.v7.widget.RecyclerView android:id="@id/rv_nut_mini_list" android:background="@color/c5" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:id="@id/rl_bind_connecting" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include layout="@layout/include_bind_connecting" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_bind_wait_tap" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true">
+        <TextView android:textSize="@dimen/t1" android:textColor="@color/c2" android:id="@id/tv_bind_tap_hint1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/bind_tap_nut_mini" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/t2" android:textColor="@color/c6" android:id="@id/tv_bind_tap_hint2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/bind_tap_countdown" android:layout_below="@id/tv_bind_tap_hint1" android:layout_centerHorizontal="true" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/tv_bind_tap_hint1">
+            <ImageView android:id="@id/iv_bind_tap_nut_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="160.0dip" android:src="@drawable/img_animation_f6_knock" android:layout_centerHorizontal="true" />
+            <ImageView android:id="@id/iv_bind_tap_nut_hand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="160.0dip" android:layout_marginTop="70.0dip" android:src="@drawable/img_animation_f6_knock2" android:scaleType="matrix" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/t2" android:textColor="@color/c6" android:id="@id/tv_bind_nut_not_flash" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip" android:text="@string/bind_nut_not_flash" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <LinearLayout android:id="@id/ll_bind_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true">
+        <include layout="@layout/include_bind_device_scan_error" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/ll_connect_error" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true">
+        <include layout="@layout/include_bind_device_connect_error" />
+    </LinearLayout>
+</LinearLayout>

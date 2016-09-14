@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_banner" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/img_banner_foreground" />
+    <TextView android:textSize="@dimen/t1" android:textColor="@color/c5" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

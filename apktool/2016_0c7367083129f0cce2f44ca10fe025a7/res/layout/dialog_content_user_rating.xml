@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#e5ffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/t3" android:textColor="@color/c1" android:gravity="center_vertical" android:id="@id/tv_user_rating_hint" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="34.0dip" android:paddingStart="20.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_user_rating_hint">
+        <TextView android:textSize="@dimen/t5" android:textColor="@color/c1" android:gravity="center" android:id="@id/tv_user_rating_bad" android:background="@drawable/bg_list_border_top_selector" android:layout_width="fill_parent" android:layout_height="54.0dip" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/t5" android:textColor="@color/c1" android:gravity="center" android:id="@id/tv_user_rating_good" android:background="@drawable/bg_list_border_top_selector" android:layout_width="fill_parent" android:layout_height="54.0dip" android:layout_weight="1.0" />
+        <TextView android:textSize="@dimen/t5" android:textColor="@color/c15" android:gravity="center" android:id="@id/tv_user_rating_cancel" android:background="@drawable/bg_list_border_top_selector" android:layout_width="fill_parent" android:layout_height="54.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

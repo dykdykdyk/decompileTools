@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_guide_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/img_guide_content01" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/t3" android:textColor="@color/c1" android:gravity="center" android:id="@id/tv_guide_content" android:paddingLeft="40.0dip" android:paddingRight="40.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/guide_content1" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="@color/c6" android:id="@id/tv_guide_content_tile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="60.0dip" android:text="@string/guide_title1" android:layout_above="@id/tv_guide_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

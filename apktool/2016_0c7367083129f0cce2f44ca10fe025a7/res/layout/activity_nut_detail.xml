@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/actionbar_default" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.nut.blehunter.ui.widget.CircleImageView android:id="@id/civ_image" android:layout_width="@dimen/image_width" android:layout_height="@dimen/image_height" style="@style/CircleImageStyle" />
+        <TextView android:textSize="@dimen/t4" android:textColor="@color/c1" android:id="@id/tv_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/iv_ring_ripple" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/img_call_bg_ripple" android:layout_centerInParent="true" android:scaleX="0.7" android:scaleY="0.7" />
+            <ImageButton android:id="@id/ib_call" android:background="@drawable/bg_call_nut" android:visibility="invisible" android:layout_width="@dimen/btn_call_width" android:layout_height="@dimen/btn_call_height" android:src="@drawable/ic_btn_ring" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/iv_searching" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_btn_search" android:layout_centerInParent="true" />
+            <TextView android:textSize="@dimen/t3" android:textColor="@color/c6" android:id="@id/tv_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_btn_call_device" android:layout_below="@id/ib_call" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="@dimen/t4" android:textColor="@color/c2" android:gravity="center" android:id="@id/tv_location" android:padding="@dimen/edge_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_status" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="48.0dip" android:layout_alignParentTop="true" />
+            <TextView android:textSize="@dimen/t2" android:textColor="@color/c1" android:id="@id/tv_debug_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/ll_status" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/iv_fade_map" android:background="@drawable/btn_map" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" />
+</LinearLayout>

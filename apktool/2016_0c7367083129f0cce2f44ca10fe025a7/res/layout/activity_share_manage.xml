@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/c5" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/actionbar_default_with_border" />
+    <RelativeLayout android:id="@id/rl_share_manage_none" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/iv_share_none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="60.0dip" android:src="@drawable/img_share_none" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/t1" android:textColor="@color/c1" android:id="@id/tv_share_manage_hint1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:text="@string/share_manage_hint1" android:layout_below="@id/iv_share_none" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/t3" android:textColor="@color/c2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:text="@string/share_manage_hint2" android:layout_below="@id/tv_share_manage_hint1" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView android:scrollbarSize="0.0dip" android:id="@id/rv_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:dividerHeight="0.0dip" />
+</LinearLayout>

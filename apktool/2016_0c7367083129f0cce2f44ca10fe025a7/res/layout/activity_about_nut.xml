@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/c4" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/actionbar_default_with_border" />
+    <TextView android:id="@id/tv_privacy_agreement" android:layout_marginTop="@dimen/edge_margin_medium" android:text="@string/privacy_agreement" style="@style/CellInPageStyle" />
+    <TextView android:id="@id/tv_use_clause" android:text="@string/use_clause" style="@style/CellInPageStyle" />
+    <TextView android:id="@id/tv_rate" android:visibility="gone" android:text="@string/about_list_score" style="@style/CellInPageStyle" />
+    <TextView android:id="@id/tv_new_version" android:text="@string/about_list_new_version" style="@style/CellInPageStyle" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/edge_margin_large">
+        <ImageView android:id="@id/iv_about_icon" android:background="@drawable/img_about" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ll_about_app_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <TextView android:textColor="@color/c3" android:id="@id/tv_about_app_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/about_name" />
+            <TextView android:textColor="@color/c3" android:id="@id/tv_about_version_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_about_zzkj" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/c3" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/about_copyright" />
+            <TextView android:textColor="@color/c3" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/about_right_reserved" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

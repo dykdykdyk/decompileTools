@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/c5" android:layout_width="fill_parent" android:layout_height="82.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.nut.blehunter.ui.widget.CircleImageView android:id="@id/civ_share_manage_avatar" android:layout_width="64.0dip" android:layout_height="64.0dip" android:src="@drawable/img_default_pic" android:layout_centerVertical="true" android:layout_marginStart="10.0dip" android:layout_marginEnd="20.0dip" />
+    <TextView android:textSize="@dimen/t1" android:textColor="@color/c1" android:ellipsize="end" android:id="@id/tv_share_manage_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:singleLine="true" android:layout_toEndOf="@id/civ_share_manage_avatar" />
+    <TextView android:textSize="@dimen/t4" android:textColor="@color/c2" android:id="@id/tv_share_manage_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/look_for_share_accept" android:layout_below="@id/tv_share_manage_name" android:layout_toEndOf="@id/civ_share_manage_avatar" />
+    <ImageView android:id="@id/iv_share_manage_delete" android:padding="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_list_delete_share" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+    <View android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" android:layout_marginStart="20.0dip" />
+</RelativeLayout>

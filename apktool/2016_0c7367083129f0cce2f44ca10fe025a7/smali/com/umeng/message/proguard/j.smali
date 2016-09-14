@@ -1,0 +1,2891 @@
+.class public Lcom/umeng/message/proguard/j;
+.super Ljava/lang/Object;
+.source "SoManager.java"
+
+# interfaces
+.implements Landroid/os/Handler$Callback;
+
+
+# static fields
+.field public static final a:Ljava/lang/String;
+
+.field private static f:I
+
+.field private static g:I
+
+.field private static h:I
+
+.field private static final i:Ljava/util/concurrent/locks/ReentrantLock;
+
+.field private static j:Lcom/umeng/message/proguard/j;
+
+
+# instance fields
+.field public b:Z
+
+.field public c:Landroid/os/Handler;
+
+.field private d:Landroid/content/Context;
+
+.field private e:Ljava/lang/String;
+
+.field private k:Ljava/lang/String;
+
+.field private l:Ljava/lang/String;
+
+.field private m:Ljava/lang/String;
+
+.field private n:Ljava/lang/String;
+
+.field private o:Ljava/lang/String;
+
+.field private p:Ljava/lang/String;
+
+.field private q:Ljava/lang/String;
+
+.field private r:Ljava/lang/String;
+
+.field private s:I
+
+.field private t:Z
+
+.field private u:Landroid/os/HandlerThread;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .prologue
+    .line 44
+    const-class v0, Lcom/umeng/message/proguard/j;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    .line 66
+    const/16 v0, 0x708
+
+    sput v0, Lcom/umeng/message/proguard/j;->f:I
+
+    .line 68
+    const/16 v0, 0x1c20
+
+    sput v0, Lcom/umeng/message/proguard/j;->g:I
+
+    .line 70
+    const/16 v0, 0x9c4
+
+    sput v0, Lcom/umeng/message/proguard/j;->h:I
+
+    .line 72
+    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+
+    sput-object v0, Lcom/umeng/message/proguard/j;->i:Ljava/util/concurrent/locks/ReentrantLock;
+
+    .line 74
+    const/4 v0, 0x0
+
+    sput-object v0, Lcom/umeng/message/proguard/j;->j:Lcom/umeng/message/proguard/j;
+
+    return-void
+.end method
+
+.method private constructor <init>(Landroid/content/Context;)V
+    .locals 5
+
+    .prologue
+    const/4 v4, 0x1
+
+    const/4 v3, 0x0
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x50
+
+    .line 101
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 62
+    iput-object v1, p0, Lcom/umeng/message/proguard/j;->d:Landroid/content/Context;
+
+    .line 76
+    iput-boolean v3, p0, Lcom/umeng/message/proguard/j;->b:Z
+
+    .line 79
+    const-string v0, "100001"
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->k:Ljava/lang/String;
+
+    .line 80
+    const-string v0, "tb_android_daemon_1.1.0"
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->l:Ljava/lang/String;
+
+    .line 81
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->m:Ljava/lang/String;
+
+    .line 82
+    const-string v0, "21646297"
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->n:Ljava/lang/String;
+
+    .line 84
+    const-string v0, "null"
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->o:Ljava/lang/String;
+
+    .line 85
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->p:Ljava/lang/String;
+
+    .line 86
+    const-string v0, "100.69.165.28"
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->q:Ljava/lang/String;
+
+    .line 87
+    const-string v0, "http://100.69.165.28/agoo/report"
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->r:Ljava/lang/String;
+
+    .line 88
+    iput v2, p0, Lcom/umeng/message/proguard/j;->s:I
+
+    .line 93
+    iput-boolean v4, p0, Lcom/umeng/message/proguard/j;->t:Z
+
+    .line 95
+    iput-object v1, p0, Lcom/umeng/message/proguard/j;->c:Landroid/os/Handler;
+
+    .line 96
+    iput-object v1, p0, Lcom/umeng/message/proguard/j;->u:Landroid/os/HandlerThread;
+
+    .line 1133
+    sget-object v0, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v1, "start handler init"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 1134
+    new-instance v0, Landroid/os/HandlerThread;
+
+    const-string v1, "soManager-threads"
+
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->u:Landroid/os/HandlerThread;
+
+    .line 1135
+    iget-object v0, p0, Lcom/umeng/message/proguard/j;->u:Landroid/os/HandlerThread;
+
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
+
+    .line 1136
+    new-instance v0, Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/umeng/message/proguard/j;->u:Landroid/os/HandlerThread;
+
+    invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->c:Landroid/os/Handler;
+
+    .line 103
+    iput-object p1, p0, Lcom/umeng/message/proguard/j;->d:Landroid/content/Context;
+
+    .line 104
+    const/16 v0, 0x258
+
+    sput v0, Lcom/umeng/message/proguard/j;->f:I
+
+    .line 105
+    iput-boolean v3, p0, Lcom/umeng/message/proguard/j;->b:Z
+
+    .line 106
+    new-instance v0, Landroid/os/Build;
+
+    invoke-direct {v0}, Landroid/os/Build;-><init>()V
+
+    const-string v1, "CPU_ABI"
+
+    invoke-static {v0, v1}, Lcom/umeng/message/proguard/j;->a(Landroid/os/Build;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->e:Ljava/lang/String;
+
+    .line 108
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "/data/data/"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->m:Ljava/lang/String;
+
+    .line 109
+    iget-object v0, p0, Lcom/umeng/message/proguard/j;->d:Landroid/content/Context;
+
+    invoke-static {v0}, Lorg/android/a;->l(Landroid/content/Context;)J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->p:Ljava/lang/String;
+
+    .line 110
+    iget-object v0, p0, Lcom/umeng/message/proguard/j;->d:Landroid/content/Context;
+
+    invoke-static {v0}, Lorg/android/a;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->n:Ljava/lang/String;
+
+    .line 111
+    iget-object v0, p0, Lcom/umeng/message/proguard/j;->d:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/umeng/message/proguard/bk;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->o:Ljava/lang/String;
+
+    .line 112
+    iget-object v0, p0, Lcom/umeng/message/proguard/j;->d:Landroid/content/Context;
+
+    invoke-static {v0}, Lorg/android/a;->u(Landroid/content/Context;)I
+
+    move-result v0
+
+    .line 113
+    if-eq v0, v4, :cond_0
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_1
+
+    .line 114
+    :cond_0
+    const-string v0, "agoodm.m.taobao.com"
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->q:Ljava/lang/String;
+
+    .line 115
+    iput v2, p0, Lcom/umeng/message/proguard/j;->s:I
+
+    .line 116
+    const-string v0, "http://agoodm.m.taobao.com/agoo/report"
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->r:Ljava/lang/String;
+
+    .line 117
+    const-string v0, "1009527"
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->k:Ljava/lang/String;
+
+    .line 130
+    :goto_0
+    return-void
+
+    .line 118
+    :cond_1
+    if-nez v0, :cond_2
+
+    .line 119
+    const-string v0, "110.75.98.154"
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->q:Ljava/lang/String;
+
+    .line 120
+    iput v2, p0, Lcom/umeng/message/proguard/j;->s:I
+
+    .line 121
+    const-string v0, "http://agoodm.wapa.taobao.com/agoo/report"
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->r:Ljava/lang/String;
+
+    .line 122
+    const-string v0, "1009527"
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->k:Ljava/lang/String;
+
+    goto :goto_0
+
+    .line 124
+    :cond_2
+    const-string v0, "100.69.168.33"
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->q:Ljava/lang/String;
+
+    .line 125
+    iput v2, p0, Lcom/umeng/message/proguard/j;->s:I
+
+    .line 126
+    const-string v0, "http://100.69.168.33/agoo/report"
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->r:Ljava/lang/String;
+
+    .line 127
+    const/16 v0, 0x3c
+
+    sput v0, Lcom/umeng/message/proguard/j;->f:I
+
+    .line 128
+    const-string v0, "9527"
+
+    iput-object v0, p0, Lcom/umeng/message/proguard/j;->k:Ljava/lang/String;
+
+    goto :goto_0
+.end method
+
+.method public static a(Landroid/content/Context;)Lcom/umeng/message/proguard/j;
+    .locals 2
+
+    .prologue
+    .line 170
+    :try_start_0
+    sget-object v0, Lcom/umeng/message/proguard/j;->i:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    .line 171
+    sget-object v0, Lcom/umeng/message/proguard/j;->j:Lcom/umeng/message/proguard/j;
+
+    if-nez v0, :cond_0
+
+    .line 172
+    new-instance v0, Lcom/umeng/message/proguard/j;
+
+    invoke-direct {v0, p0}, Lcom/umeng/message/proguard/j;-><init>(Landroid/content/Context;)V
+
+    sput-object v0, Lcom/umeng/message/proguard/j;->j:Lcom/umeng/message/proguard/j;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 178
+    :cond_0
+    sget-object v0, Lcom/umeng/message/proguard/j;->i:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 180
+    :goto_0
+    sget-object v0, Lcom/umeng/message/proguard/j;->j:Lcom/umeng/message/proguard/j;
+
+    return-object v0
+
+    .line 178
+    :catch_0
+    move-exception v0
+
+    sget-object v0, Lcom/umeng/message/proguard/j;->i:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    sget-object v1, Lcom/umeng/message/proguard/j;->i:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw v0
+.end method
+
+.method private a()Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 140
+    iget-object v0, p0, Lcom/umeng/message/proguard/j;->e:Ljava/lang/String;
+
+    const-string v1, "arm"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 141
+    const-string v0, "armeabi/"
+
+    .line 143
+    :goto_0
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lcom/umeng/message/proguard/j;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "/"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method private static a(Landroid/os/Build;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 155
+    :try_start_0
+    const-class v0, Landroid/os/Build;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    .line 156
+    invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    .line 158
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    const-string v0, "Unknown"
+
+    goto :goto_0
+.end method
+
+.method private a(Ljava/io/FileOutputStream;)V
+    .locals 5
+
+    .prologue
+    .line 231
+    iget-object v0, p0, Lcom/umeng/message/proguard/j;->e:Ljava/lang/String;
+
+    .line 2019
+    const-string v1, "arm"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 2020
+    const-string v0, "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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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"
+
+    .line 232
+    :goto_0
+    sget-object v1, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, ">>>soDataSize:datasize:"
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 233
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/umeng/message/proguard/l;->a([B)[B
+
+    move-result-object v0
+
+    .line 234
+    sget-object v1, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, ">>>soDataSize:"
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    array-length v3, v0
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 235
+    array-length v1, v0
+
+    if-gtz v1, :cond_3
+
+    .line 264
+    :cond_0
+    :goto_1
+    return-void
+
+    .line 2022
+    :cond_1
+    sget-object v1, Lcom/umeng/message/proguard/i;->d:Lcom/umeng/message/proguard/i;
+
+    .line 3017
+    iget-object v1, v1, Lcom/umeng/message/proguard/i;->e:Ljava/lang/String;
+
+    .line 2022
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 2023
+    const-string v0, "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AAAA6RD/////JdCvBAhocAAAAOkA/////yXUrwQIaHgAAADp8P7///8l2K8ECGiAAAAA6eD+////JdyvBAhoiAAAAOnQ/v///yXgrwQIaJAAAADpwP7///8l5K8ECGiYAAAA6bD+////JeivBAhooAAAAOmg/v///yXsrwQIaKgAAADpkP7///8l8K8ECGiwAAAA6YD+////JfSvBAhouAAAAOlw/v///yX4rwQIaMAAAADpYP7///8l/K8ECGjIAAAA6VD+//9VuQ0AAACJ5VdWU+jMBAAAgcOsJwAAg+TwjaQkYP///4uD+P///418JEiLdQzHRCR8AAAAAIsAx4QkgAAAAAAAAADHhCSEAAAAAAAAAImEJJwAAAAxwMeEJIgAAAAAAAAAx4QkjAAAAAAAAADHhCSQAAAAAAAAAMeEJJQAAAAAAAAAx4QkmAAAAAAAAADHRCQoLAEAAMdEJCwAAAAAx0QkOAAAAADHRCQwAAAAAMdEJDQAAAAAx0QkPAAAAACJfCQk86uNu1jg//+NtCYAAAAAi0UIiXwkCIl0JASJBCTo3f3//4P4/w+ExAEAAIPoQYP4Mw+HlAEAAIuEg6Dg//8B2P/gi4P8////iwCJBCTovf3//4lEJCjrt4uD/P///4sAiUQkPOupi4P8////iwCJRCQ065uLg/z///+LAIlEJDDrjYuD/P///4sAiUQkOOl8////i4P8////iwCJRCQs6Wv///+ATCR4Aulh////i4P8////iwCJBCToYf3//4lEJGzpSP///4uD/P///42MJIwAAACJTCQgicqLAOhOAwAAi0wkIDHShcAPRNGJVCRo6Rr///+Lg/z///+LAIlEJHTpCf///4uD/P///4sAiUQkVOn4/v//gEwkeAHp7v7//4uD/P///4sAiUQkUOnd/v//i4P8////iwCJRCRI6cz+//+Lg/z///+LAIkEJOjM/P//iUQkZOmz/v//i4P8////iwCJRCRc6aL+//+Lg/z///+LAIlEJEzpkf7//4uD/P///41MJHyJTCQgicqLAOiaAgAAi0wkIDHShcAPRNGJVCRg6Wb+//+Lg/z///+LAIlEJFjpVf7//4uD/P///4sAiUQkcOlE/v//uAEAAACLk/j///+LjCScAAAAixI50Q+FUgEAAI1l9FteX13Di3wkPInBhf8PhAIB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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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"
+
+    goto :goto_0
+
+    .line 2025
+    :cond_2
+    const-string v0, ""
+
+    goto :goto_0
+
+    .line 241
+    :cond_3
+    const/4 v2, 0x0
+
+    .line 243
+    :try_start_0
+    new-instance v1, Ljava/io/ByteArrayInputStream;
+
+    invoke-direct {v1, v0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_7
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 244
+    const/16 v0, 0x64
+
+    :try_start_1
+    new-array v0, v0, [B
+
+    .line 246
+    :goto_2
+    const/4 v2, 0x0
+
+    const/16 v3, 0x64
+
+    invoke-virtual {v1, v0, v2, v3}, Ljava/io/ByteArrayInputStream;->read([BII)I
+
+    move-result v2
+
+    if-ltz v2, :cond_4
+
+    .line 247
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v0, v3, v2}, Ljava/io/FileOutputStream;->write([BII)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_2
+
+    .line 249
+    :catch_0
+    move-exception v0
+
+    .line 250
+    :goto_3
+    :try_start_2
+    sget-object v2, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v3, "error in write files"
+
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    .line 253
+    :try_start_3
+    invoke-virtual {p1}, Ljava/io/FileOutputStream;->flush()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_4
+
+    .line 258
+    :goto_4
+    if-eqz v1, :cond_0
+
+    .line 259
+    :try_start_4
+    invoke-virtual {v1}, Ljava/io/ByteArrayInputStream;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
+
+    goto :goto_1
+
+    .line 262
+    :catch_1
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_1
+
+    .line 253
+    :cond_4
+    :try_start_5
+    invoke-virtual {p1}, Ljava/io/FileOutputStream;->flush()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
+
+    .line 259
+    :goto_5
+    :try_start_6
+    invoke-virtual {v1}, Ljava/io/ByteArrayInputStream;->close()V
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_2
+
+    goto :goto_1
+
+    .line 262
+    :catch_2
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_1
+
+    .line 254
+    :catch_3
+    move-exception v0
+
+    .line 255
+    sget-object v2, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v3, "error in write files"
+
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_5
+
+    .line 254
+    :catch_4
+    move-exception v0
+
+    .line 255
+    sget-object v2, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v3, "error in write files"
+
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_4
+
+    .line 252
+    :catchall_0
+    move-exception v0
+
+    move-object v1, v2
+
+    .line 253
+    :goto_6
+    :try_start_7
+    invoke-virtual {p1}, Ljava/io/FileOutputStream;->flush()V
+    :try_end_7
+    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_5
+
+    .line 258
+    :goto_7
+    if-eqz v1, :cond_5
+
+    .line 259
+    :try_start_8
+    invoke-virtual {v1}, Ljava/io/ByteArrayInputStream;->close()V
+    :try_end_8
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_6
+
+    .line 263
+    :cond_5
+    :goto_8
+    throw v0
+
+    .line 254
+    :catch_5
+    move-exception v2
+
+    .line 255
+    sget-object v3, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v4, "error in write files"
+
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_7
+
+    .line 262
+    :catch_6
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_8
+
+    .line 252
+    :catchall_1
+    move-exception v0
+
+    goto :goto_6
+
+    .line 249
+    :catch_7
+    move-exception v0
+
+    move-object v1, v2
+
+    goto :goto_3
+.end method
+
+.method private b()Ljava/lang/String;
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    .prologue
+    .line 188
+    const/4 v1, 0x0
+
+    .line 190
+    new-instance v2, Ljava/io/File;
+
+    iget-object v0, p0, Lcom/umeng/message/proguard/j;->d:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
+
+    move-result-object v0
+
+    const-string v3, "DaemonServer"
+
+    invoke-direct {v2, v0, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    .line 191
+    invoke-virtual {v2}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 192
+    invoke-virtual {v2}, Ljava/io/File;->delete()Z
+
+    .line 194
+    :cond_0
+    sget-object v0, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "open assets from = "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {p0}, Lcom/umeng/message/proguard/j;->a()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, "DaemonServer"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 195
+    new-instance v3, Ljava/io/FileOutputStream;
+
+    invoke-direct {v3, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+
+    .line 197
+    :try_start_0
+    iget-boolean v0, p0, Lcom/umeng/message/proguard/j;->b:Z
+
+    if-eqz v0, :cond_2
+
+    .line 198
+    iget-object v0, p0, Lcom/umeng/message/proguard/j;->d:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
+
+    move-result-object v0
+
+    .line 199
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-direct {p0}, Lcom/umeng/message/proguard/j;->a()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, "DaemonServer"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
+
+    move-result-object v1
+
+    .line 200
+    const/16 v0, 0x64
+
+    new-array v0, v0, [B
+
+    .line 202
+    :goto_0
+    invoke-virtual {v1, v0}, Ljava/io/InputStream;->read([B)I
+
+    move-result v4
+
+    if-lez v4, :cond_3
+
+    .line 203
+    const/4 v5, 0x0
+
+    invoke-virtual {v3, v0, v5, v4}, Ljava/io/FileOutputStream;->write([BII)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    .line 210
+    :catch_0
+    move-exception v0
+
+    .line 211
+    :try_start_1
+    sget-object v4, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v5, "error in copy daemon files"
+
+    invoke-static {v4, v5, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 213
+    if-eqz v1, :cond_1
+
+    .line 215
+    :try_start_2
+    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_3
+
+    .line 221
+    :cond_1
+    :goto_1
+    :try_start_3
+    invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_4
+
+    .line 226
+    :goto_2
+    invoke-virtual {v2}, Ljava/io/File;->getCanonicalPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 208
+    :cond_2
+    :try_start_4
+    invoke-direct {p0, v3}, Lcom/umeng/message/proguard/j;->a(Ljava/io/FileOutputStream;)V
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    .line 213
+    :cond_3
+    if-eqz v1, :cond_4
+
+    .line 215
+    :try_start_5
+    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
+
+    .line 221
+    :cond_4
+    :goto_3
+    :try_start_6
+    invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_1
+
+    goto :goto_2
+
+    .line 222
+    :catch_1
+    move-exception v0
+
+    .line 223
+    sget-object v1, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v3, "error in close io"
+
+    invoke-static {v1, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_2
+
+    .line 216
+    :catch_2
+    move-exception v0
+
+    .line 217
+    sget-object v1, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v4, "error in close input file"
+
+    invoke-static {v1, v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_3
+
+    .line 216
+    :catch_3
+    move-exception v0
+
+    .line 217
+    sget-object v1, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v4, "error in close input file"
+
+    invoke-static {v1, v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_1
+
+    .line 222
+    :catch_4
+    move-exception v0
+
+    .line 223
+    sget-object v1, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v3, "error in close io"
+
+    invoke-static {v1, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_2
+
+    .line 213
+    :catchall_0
+    move-exception v0
+
+    if-eqz v1, :cond_5
+
+    .line 215
+    :try_start_7
+    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+    :try_end_7
+    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_5
+
+    .line 221
+    :cond_5
+    :goto_4
+    :try_start_8
+    invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
+    :try_end_8
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_6
+
+    .line 224
+    :goto_5
+    throw v0
+
+    .line 216
+    :catch_5
+    move-exception v1
+
+    .line 217
+    sget-object v2, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v4, "error in close input file"
+
+    invoke-static {v2, v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_4
+
+    .line 222
+    :catch_6
+    move-exception v1
+
+    .line 223
+    sget-object v2, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v3, "error in close io"
+
+    invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_5
+.end method
+
+.method public static b(Landroid/content/Context;)V
+    .locals 7
+
+    .prologue
+    .line 545
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v0
+
+    .line 546
+    const/16 v1, 0xb
+
+    invoke-virtual {v0, v1}, Ljava/util/Calendar;->get(I)I
+
+    move-result v1
+
+    .line 547
+    const-string v0, "alarm"
+
+    .line 548
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/AlarmManager;
+
+    .line 549
+    if-eqz v0, :cond_1
+
+    .line 4527
+    new-instance v2, Landroid/content/Intent;
+
+    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
+
+    .line 4528
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ".intent.action.COCKROACH"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 4530
+    const-string v3, "cockroach"
+
+    const-string v4, "cockroach-PPreotect"
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 4531
+    const-string v3, "pack"
+
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 4532
+    const/4 v3, 0x0
+
+    const/high16 v4, 0x8000000
+
+    invoke-static {p0, v3, v2, v4}, Landroid/app/PendingIntent;->getService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v6
+
+    .line 551
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v2
+
+    .line 552
+    const/16 v4, 0x17
+
+    if-gt v1, v4, :cond_0
+
+    const/4 v4, 0x6
+
+    if-ge v1, v4, :cond_2
+
+    .line 553
+    :cond_0
+    sget-object v1, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v4, "time is night, do not wakeup cpu"
+
+    invoke-static {v1, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 4572
+    invoke-virtual {v0, v6}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
+
+    .line 4574
+    const/4 v1, 0x3
+
+    sget v4, Lcom/umeng/message/proguard/j;->g:I
+
+    mul-int/lit16 v4, v4, 0x3e8
+
+    int-to-long v4, v4
+
+    add-long/2addr v2, v4
+
+    sget v4, Lcom/umeng/message/proguard/j;->g:I
+
+    mul-int/lit16 v4, v4, 0x3e8
+
+    int-to-long v4, v4
+
+    invoke-virtual/range {v0 .. v6}, Landroid/app/AlarmManager;->setRepeating(IJJLandroid/app/PendingIntent;)V
+
+    .line 562
+    :cond_1
+    :goto_0
+    return-void
+
+    .line 556
+    :cond_2
+    sget-object v1, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v4, "time is daytime, wakeup cpu for keeping connecntion"
+
+    invoke-static {v1, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 5565
+    invoke-virtual {v0, v6}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
+
+    .line 5567
+    const/4 v1, 0x2
+
+    sget v4, Lcom/umeng/message/proguard/j;->h:I
+
+    mul-int/lit16 v4, v4, 0x3e8
+
+    int-to-long v4, v4
+
+    add-long/2addr v2, v4
+
+    sget v4, Lcom/umeng/message/proguard/j;->h:I
+
+    mul-int/lit16 v4, v4, 0x3e8
+
+    int-to-long v4, v4
+
+    invoke-virtual/range {v0 .. v6}, Landroid/app/AlarmManager;->setRepeating(IJJLandroid/app/PendingIntent;)V
+
+    goto :goto_0
+.end method
+
+.method private c()Ljava/lang/String;
+    .locals 8
+
+    .prologue
+    const/16 v7, 0xb
+
+    .line 286
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 287
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "/data/data/"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/umeng/message/proguard/j;->d:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 288
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, "-s \""
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v3, "/lib/\" "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 289
+    const-string v1, "-n \"runServer\" "
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 290
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, "-p \""
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 3358
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 3359
+    const-string v4, "startservice -n {packname}/com.umeng.message.UmengService --es cockroach cockroach-PPreotect --es pack {packname}"
+
+    const-string v5, "\\{packname\\}"
+
+    iget-object v6, p0, Lcom/umeng/message/proguard/j;->d:Landroid/content/Context;
+
+    invoke-virtual {v6}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 3362
+    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    .line 3363
+    const/16 v5, 0xf
+
+    if-le v4, v5, :cond_0
+
+    .line 3364
+    const-string v4, " --user 0"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 3366
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 290
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v3, "\" "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 291
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, "-f \""
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\" "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 292
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "-t \""
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget v1, Lcom/umeng/message/proguard/j;->f:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\" "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 293
+    const-string v0, "-c \"agoo.pid\" "
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 294
+    iget-object v0, p0, Lcom/umeng/message/proguard/j;->m:Ljava/lang/String;
+
+    if-eqz v0, :cond_1
+
+    .line 295
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "-P "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/umeng/message/proguard/j;->m:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 296
+    :cond_1
+    iget-object v0, p0, Lcom/umeng/message/proguard/j;->k:Ljava/lang/String;
+
+    if-eqz v0, :cond_2
+
+    .line 297
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "-K "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/umeng/message/proguard/j;->k:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 301
+    :cond_2
+    iget-object v0, p0, Lcom/umeng/message/proguard/j;->l:Ljava/lang/String;
+
+    if-eqz v0, :cond_3
+
+    .line 302
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "-U "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/umeng/message/proguard/j;->l:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 303
+    :cond_3
+    iget-object v0, p0, Lcom/umeng/message/proguard/j;->r:Ljava/lang/String;
+
+    if-eqz v0, :cond_4
+
+    .line 304
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "-L "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/umeng/message/proguard/j;->r:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 305
+    :cond_4
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "-D "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {p0}, Lcom/umeng/message/proguard/j;->d()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 306
+    iget-object v0, p0, Lcom/umeng/message/proguard/j;->q:Ljava/lang/String;
+
+    if-eqz v0, :cond_5
+
+    .line 307
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "-I "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/umeng/message/proguard/j;->q:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 308
+    :cond_5
+    iget v0, p0, Lcom/umeng/message/proguard/j;->s:I
+
+    if-lez v0, :cond_6
+
+    .line 309
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "-O "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lcom/umeng/message/proguard/j;->s:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 4329
+    :cond_6
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    if-ge v0, v7, :cond_9
+
+    .line 4330
+    invoke-static {}, Landroid/net/Proxy;->getDefaultHost()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 4337
+    :goto_0
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    if-ge v1, v7, :cond_a
+
+    .line 4338
+    invoke-static {}, Landroid/net/Proxy;->getDefaultPort()I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 313
+    :goto_1
+    if-eqz v0, :cond_7
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v3
+
+    if-nez v3, :cond_7
+
+    .line 314
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "-X "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v3, " "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 315
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v3, "-Y "
+
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 321
+    :cond_7
+    iget-boolean v0, p0, Lcom/umeng/message/proguard/j;->t:Z
+
+    if-eqz v0, :cond_8
+
+    .line 322
+    const-string v0, "-T "
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 324
+    :cond_8
+    const-string v0, "-Z "
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 325
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 4332
+    :cond_9
+    const-string v0, "http.proxyHost"
+
+    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 4340
+    :cond_a
+    const-string v1, "http.proxyPort"
+
+    invoke-static {v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_1
+.end method
+
+.method private d()Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 345
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "{\"package\":\""
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/umeng/message/proguard/j;->d:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\",\"appKey\":\""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/umeng/message/proguard/j;->n:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\",\"utdid\":\""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/umeng/message/proguard/j;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\",\"sdkVersion\":\""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/umeng/message/proguard/j;->p:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\"}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 349
+    :try_start_0
+    const-string v1, "UTF-8"
+
+    invoke-static {v0, v1}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    .line 353
+    :goto_0
+    return-object v0
+
+    .line 352
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
+
+    goto :goto_0
+.end method
+
+.method private e()V
+    .locals 18
+
+    .prologue
+    .line 370
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "/data/data/"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/umeng/message/proguard/j;->d:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "/eudemon"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v13
+
+    .line 371
+    new-instance v1, Ljava/io/File;
+
+    invoke-direct {v1, v13}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .line 372
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    .line 449
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 375
+    :cond_1
+    const/4 v4, 0x0
+
+    .line 376
+    const/4 v10, 0x0
+
+    .line 377
+    const/4 v3, 0x0
+
+    .line 378
+    const/4 v2, 0x0
+
+    .line 380
+    :try_start_0
+    new-instance v11, Ljava/io/FileInputStream;
+
+    invoke-direct {v11, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_d
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 381
+    :try_start_1
+    new-instance v9, Ljava/io/InputStreamReader;
+
+    invoke-direct {v9, v11}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_e
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    .line 382
+    :try_start_2
+    new-instance v8, Ljava/io/BufferedReader;
+
+    invoke-direct {v8, v9}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_f
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    .line 385
+    :try_start_3
+    const-string v1, ""
+
+    move-object v12, v1
+
+    .line 386
+    :cond_2
+    :goto_1
+    invoke-virtual {v8}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_8
+
+    .line 387
+    const-string v2, "\\|"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object v6
+
+    .line 388
+    array-length v2, v6
+
+    const/4 v3, 0x5
+
+    if-ne v2, v3, :cond_2
+
+    .line 391
+    const/4 v2, 0x0
+
+    aget-object v2, v6, v2
+
+    invoke-virtual {v2}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 392
+    const/4 v3, 0x1
+
+    aget-object v3, v6, v3
+
+    invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    .line 393
+    const/4 v4, 0x2
+
+    aget-object v4, v6, v4
+
+    invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
+
+    move-result v4
+
+    .line 394
+    sub-int v7, v4, v3
+
+    .line 395
+    const/4 v5, 0x3
+
+    aget-object v5, v6, v5
+
+    invoke-virtual {v5}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 396
+    const/4 v14, 0x4
+
+    aget-object v6, v6, v14
+
+    invoke-virtual {v6}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v6
+
+    .line 398
+    const-string v14, "0"
+
+    invoke-virtual {v6, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_4
+
+    .line 399
+    new-instance v14, Ljava/io/File;
+
+    const-string v15, "/proc"
+
+    invoke-direct {v14, v15, v2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 400
+    sget-object v15, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    new-instance v16, Ljava/lang/StringBuilder;
+
+    const-string v17, "pidfile:"
+
+    invoke-direct/range {v16 .. v17}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    move-object/from16 v0, v16
+
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v16
+
+    invoke-virtual/range {v16 .. v16}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v16
+
+    invoke-static/range {v15 .. v16}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 401
+    invoke-virtual {v14}, Ljava/io/File;->exists()Z
+
+    move-result v14
+
+    if-eqz v14, :cond_3
+
+    .line 403
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "\n"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    move-object v12, v1
+
+    .line 404
+    goto/16 :goto_1
+
+    .line 406
+    :cond_3
+    sget v1, Lcom/umeng/message/proguard/j;->f:I
+
+    div-int/lit8 v1, v1, 0x2
+
+    add-int/2addr v7, v1
+
+    .line 408
+    :cond_4
+    sget-object v1, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    new-instance v14, Ljava/lang/StringBuilder;
+
+    const-string v15, "report pid:"
+
+    invoke-direct {v14, v15}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v14, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    const-string v15, " start:"
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    invoke-virtual {v14, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    const-string v15, " end:"
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    invoke-virtual {v14, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    const-string v15, " count:"
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    invoke-virtual {v14, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    const-string v15, " code:"
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    invoke-virtual {v14, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    const-string v15, " alive:"
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    invoke-virtual {v14, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v14
+
+    invoke-static {v1, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 409
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcom/umeng/message/proguard/j;->d:Landroid/content/Context;
+
+    invoke-static/range {v1 .. v7}, Lcom/umeng/message/proguard/bk;->a(Landroid/content/Context;Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;I)V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_3
+
+    goto/16 :goto_1
+
+    .line 416
+    :catch_0
+    move-exception v1
+
+    move-object v2, v8
+
+    move-object v3, v9
+
+    move-object v4, v10
+
+    move-object v5, v11
+
+    .line 417
+    :goto_2
+    :try_start_4
+    sget-object v6, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v7, "report daemon stat exp:"
+
+    invoke-static {v6, v7, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_5
+
+    .line 419
+    if-eqz v2, :cond_5
+
+    .line 421
+    :try_start_5
+    invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
+    :try_end_5
+    .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_6
+
+    .line 426
+    :cond_5
+    :goto_3
+    if-eqz v3, :cond_6
+
+    .line 428
+    :try_start_6
+    invoke-virtual {v3}, Ljava/io/InputStreamReader;->close()V
+    :try_end_6
+    .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_7
+
+    .line 433
+    :cond_6
+    :goto_4
+    if-eqz v5, :cond_7
+
+    .line 435
+    :try_start_7
+    invoke-virtual {v5}, Ljava/io/FileInputStream;->close()V
+    :try_end_7
+    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_8
+
+    .line 440
+    :cond_7
+    :goto_5
+    if-eqz v4, :cond_0
+
+    .line 442
+    :try_start_8
+    invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
+    :try_end_8
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_1
+
+    goto/16 :goto_0
+
+    .line 443
+    :catch_1
+    move-exception v1
+
+    .line 444
+    sget-object v2, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v3, "error in close input file"
+
+    invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto/16 :goto_0
+
+    .line 412
+    :cond_8
+    :try_start_9
+    new-instance v2, Ljava/io/FileOutputStream;
+
+    new-instance v1, Ljava/io/File;
+
+    invoke-direct {v1, v13}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {v2, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    :try_end_9
+    .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_0
+    .catchall {:try_start_9 .. :try_end_9} :catchall_3
+
+    .line 413
+    :try_start_a
+    invoke-virtual {v12}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Ljava/io/FileOutputStream;->write([B)V
+
+    .line 414
+    invoke-virtual {v8}, Ljava/io/BufferedReader;->close()V
+    :try_end_a
+    .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_10
+    .catchall {:try_start_a .. :try_end_a} :catchall_4
+
+    .line 421
+    :try_start_b
+    invoke-virtual {v8}, Ljava/io/BufferedReader;->close()V
+    :try_end_b
+    .catch Ljava/lang/Throwable; {:try_start_b .. :try_end_b} :catch_3
+
+    .line 428
+    :goto_6
+    :try_start_c
+    invoke-virtual {v9}, Ljava/io/InputStreamReader;->close()V
+    :try_end_c
+    .catch Ljava/lang/Throwable; {:try_start_c .. :try_end_c} :catch_4
+
+    .line 435
+    :goto_7
+    :try_start_d
+    invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
+    :try_end_d
+    .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_5
+
+    .line 442
+    :goto_8
+    :try_start_e
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+    :try_end_e
+    .catch Ljava/io/IOException; {:try_start_e .. :try_end_e} :catch_2
+
+    goto/16 :goto_0
+
+    .line 443
+    :catch_2
+    move-exception v1
+
+    .line 444
+    sget-object v2, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v3, "error in close input file"
+
+    invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto/16 :goto_0
+
+    .line 422
+    :catch_3
+    move-exception v1
+
+    .line 423
+    sget-object v3, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v4, "error in close buffreader stream"
+
+    invoke-static {v3, v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_6
+
+    .line 429
+    :catch_4
+    move-exception v1
+
+    .line 430
+    sget-object v3, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v4, "error in close reader stream"
+
+    invoke-static {v3, v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_7
+
+    .line 436
+    :catch_5
+    move-exception v1
+
+    .line 437
+    sget-object v3, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v4, "error in close input file"
+
+    invoke-static {v3, v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_8
+
+    .line 422
+    :catch_6
+    move-exception v1
+
+    .line 423
+    sget-object v2, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v6, "error in close buffreader stream"
+
+    invoke-static {v2, v6, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_3
+
+    .line 429
+    :catch_7
+    move-exception v1
+
+    .line 430
+    sget-object v2, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v3, "error in close reader stream"
+
+    invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_4
+
+    .line 436
+    :catch_8
+    move-exception v1
+
+    .line 437
+    sget-object v2, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v3, "error in close input file"
+
+    invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_5
+
+    .line 419
+    :catchall_0
+    move-exception v1
+
+    move-object v8, v2
+
+    move-object v9, v3
+
+    move-object v11, v4
+
+    :goto_9
+    if-eqz v8, :cond_9
+
+    .line 421
+    :try_start_f
+    invoke-virtual {v8}, Ljava/io/BufferedReader;->close()V
+    :try_end_f
+    .catch Ljava/lang/Throwable; {:try_start_f .. :try_end_f} :catch_9
+
+    .line 426
+    :cond_9
+    :goto_a
+    if-eqz v9, :cond_a
+
+    .line 428
+    :try_start_10
+    invoke-virtual {v9}, Ljava/io/InputStreamReader;->close()V
+    :try_end_10
+    .catch Ljava/lang/Throwable; {:try_start_10 .. :try_end_10} :catch_a
+
+    .line 433
+    :cond_a
+    :goto_b
+    if-eqz v11, :cond_b
+
+    .line 435
+    :try_start_11
+    invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
+    :try_end_11
+    .catch Ljava/io/IOException; {:try_start_11 .. :try_end_11} :catch_b
+
+    .line 440
+    :cond_b
+    :goto_c
+    if-eqz v10, :cond_c
+
+    .line 442
+    :try_start_12
+    invoke-virtual {v10}, Ljava/io/FileOutputStream;->close()V
+    :try_end_12
+    .catch Ljava/io/IOException; {:try_start_12 .. :try_end_12} :catch_c
+
+    .line 445
+    :cond_c
+    :goto_d
+    throw v1
+
+    .line 422
+    :catch_9
+    move-exception v2
+
+    .line 423
+    sget-object v3, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v4, "error in close buffreader stream"
+
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_a
+
+    .line 429
+    :catch_a
+    move-exception v2
+
+    .line 430
+    sget-object v3, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v4, "error in close reader stream"
+
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_b
+
+    .line 436
+    :catch_b
+    move-exception v2
+
+    .line 437
+    sget-object v3, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v4, "error in close input file"
+
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_c
+
+    .line 443
+    :catch_c
+    move-exception v2
+
+    .line 444
+    sget-object v3, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    const-string v4, "error in close input file"
+
+    invoke-static {v3, v4, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_d
+
+    .line 419
+    :catchall_1
+    move-exception v1
+
+    move-object v8, v2
+
+    move-object v9, v3
+
+    goto :goto_9
+
+    :catchall_2
+    move-exception v1
+
+    move-object v8, v2
+
+    goto :goto_9
+
+    :catchall_3
+    move-exception v1
+
+    goto :goto_9
+
+    :catchall_4
+    move-exception v1
+
+    move-object v10, v2
+
+    goto :goto_9
+
+    :catchall_5
+    move-exception v1
+
+    move-object v8, v2
+
+    move-object v9, v3
+
+    move-object v10, v4
+
+    move-object v11, v5
+
+    goto :goto_9
+
+    .line 416
+    :catch_d
+    move-exception v1
+
+    move-object v5, v4
+
+    move-object v4, v10
+
+    goto/16 :goto_2
+
+    :catch_e
+    move-exception v1
+
+    move-object v4, v10
+
+    move-object v5, v11
+
+    goto/16 :goto_2
+
+    :catch_f
+    move-exception v1
+
+    move-object v3, v9
+
+    move-object v4, v10
+
+    move-object v5, v11
+
+    goto/16 :goto_2
+
+    :catch_10
+    move-exception v1
+
+    move-object v3, v9
+
+    move-object v4, v2
+
+    move-object v5, v11
+
+    move-object v2, v8
+
+    goto/16 :goto_2
+.end method
+
+
+# virtual methods
+.method public handleMessage(Landroid/os/Message;)Z
+    .locals 5
+
+    .prologue
+    .line 580
+    iget v0, p1, Landroid/os/Message;->what:I
+
+    if-nez v0, :cond_3
+
+    .line 581
+    iget-object v0, p0, Lcom/umeng/message/proguard/j;->d:Landroid/content/Context;
+
+    invoke-static {v0}, Lorg/android/a;->w(Landroid/content/Context;)I
+
+    move-result v0
+
+    .line 6464
+    if-lez v0, :cond_0
+
+    .line 6465
+    sput v0, Lcom/umeng/message/proguard/j;->f:I
+
+    .line 6467
+    :cond_0
+    sget-object v0, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "api level is:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 6468
+    iget-object v0, p0, Lcom/umeng/message/proguard/j;->d:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/umeng/message/proguard/j;->b(Landroid/content/Context;)V
+
+    .line 6470
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x14
+
+    if-ge v0, v1, :cond_1
+
+    .line 6472
+    :try_start_0
+    invoke-direct {p0}, Lcom/umeng/message/proguard/j;->b()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 6473
+    invoke-direct {p0}, Lcom/umeng/message/proguard/j;->e()V
+
+    .line 7271
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 7272
+    const-string v2, ""
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "chmod 500 "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3, v1}, Lcom/umeng/message/proguard/m;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Z
+
+    .line 7274
+    const-string v2, ""
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-direct {p0}, Lcom/umeng/message/proguard/j;->c()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3, v1}, Lcom/umeng/message/proguard/m;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Z
+
+    .line 7275
+    sget-object v1, Lcom/umeng/message/proguard/j;->a:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, " "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Lcom/umeng/message/proguard/j;->c()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 6480
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Lcom/umeng/message/proguard/j;->d:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/umeng/message/proguard/bk;->q(Landroid/content/Context;)V
+
+    .line 586
+    :cond_2
+    :goto_1
+    const/4 v0, 0x1
+
+    return v0
+
+    .line 6476
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_0
+
+    .line 583
+    :cond_3
+    iget v0, p1, Landroid/os/Message;->what:I
+
+    const/4 v1, -0x1
+
+    if-ne v0, v1, :cond_2
+
+    .line 7518
+    new-instance v0, Ljava/io/File;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "/data/data/"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/umeng/message/proguard/j;->d:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "daemonserver.pid"
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 7519
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 7520
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
+
+    goto :goto_1
+.end method

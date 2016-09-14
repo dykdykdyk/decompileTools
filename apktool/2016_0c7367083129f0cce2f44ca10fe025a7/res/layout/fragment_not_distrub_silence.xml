@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/c4" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:background="@drawable/bg_list_empty" android:layout_width="fill_parent" android:layout_height="12.0dip" />
+            <LinearLayout android:orientation="horizontal" android:background="@drawable/bg_list_border_top_bottom" android:layout_width="fill_parent" android:layout_height="@dimen/list_cell_height">
+                <TextView android:layout_gravity="center_vertical" android:text="@string/more_list_silence_time" android:layout_weight="1.0" style="@style/ListTextBlackStyle" />
+                <CheckBox android:layout_gravity="center_vertical" android:id="@id/cb_silence_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/edge_margin_medium" style="@style/CustomSwitchStyle" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/t3" android:textColor="@color/c3" android:paddingTop="@dimen/edge_margin" android:paddingBottom="@dimen/edge_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/silence_tips" android:paddingStart="@dimen/edge_margin_medium" android:paddingEnd="@dimen/edge_margin_medium" />
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_silence_time_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/stub_divider_vertical" android:animateLayoutChanges="true" android:showDividers="middle" />
+            <TextView android:id="@id/tv_add_silence_time" android:layout_marginTop="@dimen/edge_margin_medium" android:text="@string/silence_add" style="@style/CellInPageStyle" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

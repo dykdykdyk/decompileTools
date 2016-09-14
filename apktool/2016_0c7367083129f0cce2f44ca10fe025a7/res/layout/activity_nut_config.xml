@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/c4" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/actionbar_default_with_border" />
+    <TextView android:id="@id/tv_connect_record" android:layout_marginTop="@dimen/edge_margin_medium" android:text="@string/settings_connect_record" style="@style/CellInPageStyle" />
+</LinearLayout>

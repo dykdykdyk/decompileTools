@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/actionbar_default_with_border" />
+    <TextView android:textSize="@dimen/t3" android:textColor="@color/c3" android:id="@id/tv_scene_mode_instruction" android:background="@drawable/bg_list_empty" android:padding="@dimen/edge_margin_medium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/not_disturb_instruction_in" />
+    <ListView android:id="@id/lv_wifi_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" />
+</LinearLayout>

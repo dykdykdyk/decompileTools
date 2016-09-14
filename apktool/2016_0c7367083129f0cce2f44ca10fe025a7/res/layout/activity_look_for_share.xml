@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/rl_look_for_share_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/actionbar_default" />
+    <ScrollView android:scrollbarStyle="outsideOverlay" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/t4" android:textColor="@color/c2" android:id="@id/tv_look_for_share_hint1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/look_for_share_hint1" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" />
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_look_for_share_qrcode" android:background="@drawable/img_qrcode" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="28.0dip" android:layout_marginStart="40.0dip" android:layout_marginEnd="40.0dip">
+                <TextView android:textSize="@dimen/t1" android:textColor="@color/c5" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/look_for_share_title" />
+                <TextView android:textSize="@dimen/t4" android:textColor="@color/c5" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/look_for_share_hint2" />
+                <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_qr_code" android:layout_width="150.0dip" android:layout_height="150.0dip" android:layout_marginTop="18.0dip" />
+            </LinearLayout>
+            <RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/rl_look_for_share_btn" android:background="@drawable/bg_btn_green_selector" android:layout_width="150.0dip" android:layout_height="44.0dip" android:layout_marginTop="40.0dip" android:layout_marginBottom="40.0dip">
+                <TextView android:textSize="@dimen/t4" android:textColor="@color/c5" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/look_for_share_btn_text" android:drawablePadding="12.0dip" android:layout_centerInParent="true" android:drawableStart="@drawable/img_btn_qrcode_bg" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

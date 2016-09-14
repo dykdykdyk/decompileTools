@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_searching" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:src="@drawable/magnifier" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/t4" android:textColor="@color/c2" android:id="@id/tv_searching" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="@string/guide1_search_nut" android:layout_below="@id/iv_searching" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/t1" android:textColor="@color/c2" android:id="@id/tv_bind_other_hint" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bind_others_open_hint" android:layout_centerInParent="true" android:layout_marginStart="30.0dip" android:layout_marginEnd="30.0dip" />
+</RelativeLayout>
